@@ -268,125 +268,17 @@ const Map<String, SceneConfig> sceneRegistry = {
       SceneData(
         subMapAsset: 'assets/images/orlo_village_map_v2.jpg',
         mapPins: [
-          MapPinData(
-            label: '1',
-            name: 'Cancello Sud (Ingresso Principale)',
-            description:
-                'Il cancello principale di Orlo, sorvegliato da Hardy. '
-                'È qui che i personaggi sono stati fermati al loro arrivo. '
-                'La porta è robusta, in legno rinforzato con barre di ferro.',
-            xFraction: 0.50,
-            yFraction: 0.84,
-          ),
-          MapPinData(
-            label: '2A',
-            name: 'Torre di Guardia Sud-Est',
-            description:
-                'La torre di guardia al cancello principale, dove Hardy '
-                'si trovava quando ha fermato i personaggi. '
-                'Bassa e resistente, in pietra, con merlature e tetto in legno appuntito.',
-            xFraction: 0.76,
-            yFraction: 0.59,
-          ),
-          MapPinData(
-            label: '2B',
-            name: 'Torrione del Cancello Nord',
-            description:
-                'Il torrione più grande, vicino al cancello nord. '
-                'Da qui si domina tutta la valle. In tempi normali ospita una sentinella.',
-            xFraction: 0.56,
-            yFraction: 0.18,
-          ),
-          MapPinData(
-            label: '3',
-            name: 'Statua',
-            description:
-                'Una statua in pietra al centro del villaggio, consumata dalle intemperie. '
-                'Raffigura un antico sovrano o divinità locale. '
-                'Gli abitanti si raccolgono qui per le festività.',
-            xFraction: 0.45,
-            yFraction: 0.29,
-          ),
-          MapPinData(
-            label: '4',
-            name: 'Casa del Sindaco / Vagnhild',
-            description:
-                "L'edificio più grande e curato del villaggio. "
-                "Qui risiede Vagnhild, la capovillaggio. "
-                "I personaggi sono stati mandati da Hardy a cercarla qui.",
-            xFraction: 0.41,
-            yFraction: 0.36,
-          ),
-          MapPinData(
-            label: '5',
-            name: 'Negozio di Mastro Ulvar',
-            description:
-                'Il negozio generale del villaggio, gestito da Mastro Ulvar. '
-                'Vende provviste, attrezzi e oggetti di prima necessità. '
-                'Suo figlio Jory è il protetto di Hardy.',
-            xFraction: 0.38,
-            yFraction: 0.23,
-          ),
-          MapPinData(
-            label: '6',
-            name: 'Forgia / Fabbro',
-            description:
-                'La fucina del fabbro del villaggio. '
-                'Si sente il suono delle martellate e si vede il fumo del mantice. '
-                'Produce ferramenti, armi e strumenti agricoli.',
-            xFraction: 0.33,
-            yFraction: 0.29,
-          ),
-          MapPinData(
-            label: '7',
-            name: 'Locanda Tre Cervi',
-            description:
-                'La locanda del villaggio, gestita da Vagnhild (o dalla sua famiglia). '
-                'Offre cibo, bevande e alloggio. '
-                'È il centro sociale di Orlo, dove si riuniscono gli abitanti la sera.',
-            xFraction: 0.47,
-            yFraction: 0.66,
-          ),
-          MapPinData(
-            label: '8',
-            name: 'Pozzo / Santuario',
-            description:
-                "Il pozzo comune del villaggio, o piccolo santuario. "
-                "Punto di incontro quotidiano per gli abitanti. "
-                "L'acqua proviene da una sorgente sotterranea.",
-            xFraction: 0.60,
-            yFraction: 0.41,
-          ),
-          MapPinData(
-            label: '9',
-            name: 'Formazioni Rocciose / Grotta',
-            description:
-                "Le rocce cristalline che emergono dal terreno al centro di Orlo. "
-                "Sono un fenomeno naturale inspiegabile per gli abitanti. "
-                "Nascondono una grotta che potrebbe essere rilevante per l'avventura.",
-            xFraction: 0.47,
-            yFraction: 0.47,
-          ),
-          MapPinData(
-            label: '10',
-            name: 'Edificio Misterioso',
-            description:
-                "Un piccolo edificio in pietra tra le formazioni rocciose. "
-                "Gli abitanti lo evitano, ritenendolo sfortunato. "
-                "Potrebbe nascondere segreti legati all'imperatore drago.",
-            xFraction: 0.54,
-            yFraction: 0.53,
-          ),
-          MapPinData(
-            label: '1',
-            name: 'Edificio Principale Est (Locanda / Magazzino)',
-            description:
-                'Il grande edificio sul lato est del villaggio. '
-                'Potrebbe essere un magazzino, una seconda locanda o la residenza '
-                'di un personaggio importante.',
-            xFraction: 0.84,
-            yFraction: 0.38,
-          ),
+          MapPinData(label: '1', name: 'Cancello Sud', description: 'Il cancello principale di Orlo.', xFraction: 0.50, yFraction: 0.84),
+          MapPinData(label: '2A', name: 'Torre Guardia Sud-Est', description: 'La torre dove si trovava Hardy.', xFraction: 0.76, yFraction: 0.59),
+          MapPinData(label: '2B', name: 'Torrione Nord', description: 'Il torrione del cancello nord.', xFraction: 0.56, yFraction: 0.18),
+          MapPinData(label: '3', name: 'Piazza del Villaggio', description: 'La statua dell\'Imperatore Drago al centro del villaggio.', xFraction: 0.45, yFraction: 0.29),
+          MapPinData(label: '4', name: 'Locanda Ai Tre Cervi', description: 'La locanda del villaggio.', xFraction: 0.41, yFraction: 0.36),
+          MapPinData(label: '5', name: 'Negozio di Mastro Ulvar', description: 'Il negozio generale del villaggio.', xFraction: 0.38, yFraction: 0.23),
+          MapPinData(label: '6', name: 'Fucina', description: 'La fucina di Okald e Badinor.', xFraction: 0.33, yFraction: 0.29),
+          MapPinData(label: '7', name: 'Mulino e Panetteria Halfling', description: 'Il mulino a vento e la panetteria gestita dagli halfling del villaggio.', xFraction: 0.47, yFraction: 0.66),
+          MapPinData(label: '8', name: 'Area del Tempio', description: 'Il tempio in rovine sulla collina vicino ad Orlo dove risiede il mistico Dranath.', xFraction: 0.60, yFraction: 0.41),
+          MapPinData(label: '9', name: 'Capanno di Dranath', description: 'La dimora in pietra del mistico guaritore Dranath.', xFraction: 0.47, yFraction: 0.47),
+          MapPinData(label: '10', name: 'Edificio Misterioso', description: 'Edificio evitato dagli abitanti.', xFraction: 0.54, yFraction: 0.53),
         ],
       ),
     ],
