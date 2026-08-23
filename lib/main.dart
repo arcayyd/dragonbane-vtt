@@ -427,6 +427,36 @@ class _MainLayoutState extends State<MainLayout> {
                     ],
                   ),
                   const SizedBox(height: 12),
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff7a1515),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6),
+                        side: const BorderSide(color: Color(0xffdfc48c), width: 1.5),
+                      ),
+                    ),
+                    icon: const Icon(Icons.public, color: Color(0xffdfc48c), size: 18),
+                    label: Text(
+                      "🗺️ TORNA ALLA MAPPA DELLA VALLE (OVERWORLD)",
+                      style: GoogleFonts.cinzel(
+                        color: const Color(0xffdfc48c),
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onPressed: () {
+                      syncService.changeActiveMap('overworld');
+                      Navigator.pop(context);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text("Ritorno alla Mappa della Valle della Nebbia per tutti!"),
+                          backgroundColor: Colors.green,
+                        ),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 12),
                   // Categorie Principali: Eventi Cittadini | Viaggio
                   Row(
                     children: [

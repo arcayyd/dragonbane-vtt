@@ -2013,13 +2013,34 @@ class _SubMapViewState extends State<SubMapView> {
                 },
               ),
           ],
-          IconButton(
-            icon: const Icon(Icons.map, color: VttTheme.accent),
-            tooltip: "Torna alla Overworld",
+          ElevatedButton.icon(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xff7a1515),
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(6),
+                side: const BorderSide(color: Color(0xffdfc48c), width: 1),
+              ),
+            ),
+            icon: const Icon(Icons.public, color: Color(0xffdfc48c), size: 16),
+            label: Text(
+              "MAPPA DELLA VALLE",
+              style: GoogleFonts.cinzel(
+                color: const Color(0xffdfc48c),
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             onPressed: () {
-              // Return to overworld
               if (syncService.isGm) {
                 syncService.changeActiveMap('overworld');
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Ritorno alla Mappa della Valle per tutti!"),
+                    backgroundColor: Colors.green,
+                  ),
+                );
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text("Solo il GM può cambiare la mappa attiva della sessione.")),
@@ -2027,6 +2048,7 @@ class _SubMapViewState extends State<SubMapView> {
               }
             },
           ),
+          const SizedBox(width: 8),
         ],
       ),
       body: Stack(
