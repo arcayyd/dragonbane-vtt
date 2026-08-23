@@ -87,6 +87,7 @@ class _SubMapViewState extends State<SubMapView> {
       case 'orlo_troll': return "Troll nel Fienile";
       case 'orlo_torre': return syncService.isGm ? "Torre di Zirazzia" : "Torre Antica";
       case 'guglia_troll': return "Guglia del Troll";
+      case 'cultisti_impiccati': return "Cultisti Impiccati";
       default: return "Località Locale";
     }
   }

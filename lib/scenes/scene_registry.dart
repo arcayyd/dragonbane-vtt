@@ -946,4 +946,24 @@ const Map<String, SceneConfig> sceneRegistry = {
       ),
     ],
   ),
+  'cultisti_impiccati': SceneConfig(
+    mapId: 'cultisti_impiccati',
+    defaultBackground: 'assets/images/cultisti_impiccati.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      SceneData(
+        backgroundAsset: 'assets/images/cultisti_impiccati.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "CULTISTI IMPICCATI",
+          readAloud:
+              "EVENTO DI VIAGGIO — CULTISTI IMPICCATI\n"
+              "Lungo la strada desolata che solca la regione, tre figure incappucciate vestite di scure tuniche da cultisti pendono esanimi dai rami contorti di un grande albero secco.",
+          narrative:
+              "✦ Presagio Oscuro: I tre corpi oscillano lentamente nel vento cupo del crepuscolo. Sulle loro tuniche scure sono ricamati simboli maledetti e sui loro petti sono evidenti ferite o pugnali cerimoniali rituati.\n\n"
+              "✦ Ispezione dei Corpi: Se i personaggi esaminano i cadaveri superando un tiro di LOCALIZZARE o PERCEPIRE LA MAGIA, scoprono che si tratta di cultisti giustiziati o sacrificati in un oscuro rituale di purificazione o punizione interna.\n\n"
+              "✦ Indizi & Oggetti: Tra i vestiti dei cultisti è possibile trovare 2D6 monete d'argento, una pergamena consumata con simboli draconici ed una chiave in ferro battuto incisa con una runa.",
+        ),
+      ),
+    ],
+  ),
 };
