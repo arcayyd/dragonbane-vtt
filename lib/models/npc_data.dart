@@ -309,4 +309,29 @@ const List<NpcData> npcList = [
     ],
     abilities: ['Resistenza Nanica', 'Mastro Fabbro'],
   ),
+  NpcData(
+    id: 'pg_morgan',
+    name: 'Morgan',
+    category: 'pg',
+    imageAsset: 'assets/images/morgan.jpg',
+    description:
+        "Morgan è un saggio ed enigmatico incantatore ramingo, custode dei segreti della natura e della magia arcana. "
+        "È costantemente accompagnato da due corvi fidati che perlustrano i cieli per lui.",
+    stats: [
+      'Movimento: 10',
+      'PF (Punti Ferita): 12',
+      'PV (Punti Volontà): 18',
+      'Armatura: Mantello di lana e tonaca imbottita (1)',
+    ],
+    skills: [
+      'Miti e Leggende: 16',
+      'Magia (Elementalismo / Animismo): 16',
+      'Consapevolezza: 14',
+      'Persuadere: 12',
+    ],
+    weapons: [
+      'Bastone da Passeggio Intagliato (Abilità: 12, Danno: D8)',
+    ],
+    abilities: ['Compagni Corvi', 'Padronanza Arcana'],
+  ),
 ];
