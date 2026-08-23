@@ -765,7 +765,7 @@ const Map<String, SceneConfig> sceneRegistry = {
               "✦ Harga: Nel corso di molti anni, la troll si è appropriata dell’antico laboratorio, che ora riflette la sua personalità. Quando i personaggi arrivano, si spaventa e si nasconde tra le macerie. Se restano nella stanza per un po’ di tempo e toccano in giro, si fa vedere dicendo: “Cosa fate in casa mia? Andatevene o vi farò sparire per sempre!”\n\n"
               "✦ Pozioni e Altri Oggetti: Tra le bottiglie, i personaggi possono trovare cinque dosi di mistura di erbe (favore ai tiri per resistere alle malattie), tre dosi di ciascun veleno (paralizzante, letale e soporifero, tutti di potenza 12), quattro dosi di pozione di cura (guarisce 2D6 PF), due dosi di una pozione che ha lo stesso effetto dell’incantesimo LEVITARE (livello di potere 1) su chi la beve, una clessidra, alcune pergamene, un calamo, cinque razioni e il grimorio di Harga, con tutte le sue magie. I personaggi possono trovare tutto questo frugando nel laboratorio per un intervallo.\n\n"
               "✦ NORD / GIÙ: Le scale scendono fino all’Abitazione Abbandonata (#3).\n\n"
-              "✦ SU: Buco nel soffitto verso il Nido delle Arpie (#6).",
+              "✦ SU: Buco nel soffitto verso il Tetto (#6).",
         ),
         directions: [
           DirectionButtonData(
@@ -774,7 +774,7 @@ const Map<String, SceneConfig> sceneRegistry = {
             icon: Icons.arrow_downward,
           ),
           DirectionButtonData(
-            label: "SU: Nido delle Arpie (#6)",
+            label: "SU: Tetto (#6)",
             targetSceneIndex: 5,
             icon: Icons.arrow_upward,
           ),
@@ -793,13 +793,13 @@ const Map<String, SceneConfig> sceneRegistry = {
         ],
       ),
 
-      // Scene 5: 6. NIDO DELLE ARPIE
+      // Scene 5: 6. TETTO DELLA TORRE
       SceneData(
         backgroundAsset: 'assets/images/guglia_troll_arpie.jpg',
         gmNotes: GmNotesData(
-          sectionTitle: "6. NIDO DELLE ARPIE",
+          sectionTitle: "6. TETTO DELLA TORRE",
           readAloud:
-              "6. NIDO DELLE ARPIE\n"
+              "6. TETTO DELLA TORRE\n"
               "La cima della torre è a cielo aperto. Il dolce odore delle rose è quasi travolgente. Enormi cespugli di rose rosse e nere sono aggrappati alle pareti. Al centro, vedete una bassa pozza di acqua piovana sporca con delle grandi piume scure che galleggiano in superficie.",
           bodyText:
               "✦ Rose: È impossibile evitare il profumo delle rose. I personaggi devono superare un tiro di COS a ogni round o diventare Disorientati. L’effetto può essere evitato trattenendo il respiro (Manuale Base, pag. 53).\n\n"
@@ -833,13 +833,13 @@ const Map<String, SceneConfig> sceneRegistry = {
         ],
       ),
 
-      // Scene 6: 6. VISTA VALLE (NIDO DELLE ARPIE)
+      // Scene 6: 6. VISTA VALLE (TETTO DELLA TORRE)
       SceneData(
         backgroundAsset: 'assets/images/guglia_troll_vista_valle.jpg',
         gmNotes: GmNotesData(
-          sectionTitle: "6. NIDO DELLE ARPIE",
+          sectionTitle: "6. TETTO DELLA TORRE",
           readAloud:
-              "6. NIDO DELLE ARPIE\n"
+              "6. TETTO DELLA TORRE\n"
               "La cima della torre è a cielo aperto. Il dolce odore delle rose è quasi travolgente. Enormi cespugli di rose rosse e nere sono aggrappati alle pareti. Al centro, vedete una bassa pozza di acqua piovana sporca con delle grandi piume scure che galleggiano in superficie.",
           bodyText:
               "✦ Rose: È impossibile evitare il profumo delle rose. I personaggi devono superare un tiro di COS a ogni round o diventare Disorientati. L’effetto può essere evitato trattenendo il respiro (Manuale Base, pag. 53).\n\n"
@@ -849,7 +849,7 @@ const Map<String, SceneConfig> sceneRegistry = {
         ),
         directions: [
           DirectionButtonData(
-            label: "Torna al Nido delle Arpie (#6)",
+            label: "Torna al Tetto (#6)",
             targetSceneIndex: 5,
             icon: Icons.arrow_back,
           ),
@@ -942,7 +942,7 @@ const Map<String, SceneConfig> sceneRegistry = {
               "Visuale tattica su griglia del Terzo Piano della torre (Laboratorio di Harga).",
           narrative:
               "✦ Mappa Tattica Terzo Piano: Griglia con il focolare centrale, alambicchi, banchi da lavoro e la scala verso il tetto.\n\n"
-              "✦ Controlli GM: Usa 'Sali al tetto' per accedere al nido delle arpie, 'Scendi al secondo piano' per tornare giù o 'Torna indietro' per ripristinare l'illustrazione del laboratorio.",
+              "✦ Controlli GM: Usa 'Sali al tetto' per accedere al tetto della torre, 'Scendi al secondo piano' per tornare giù o 'Torna indietro' per ripristinare l'illustrazione del laboratorio.",
         ),
         directions: [],
         gmActions: [
@@ -964,13 +964,13 @@ const Map<String, SceneConfig> sceneRegistry = {
         ],
       ),
 
-      // Scene 10: GRIGLIA TATTICA — TETTO / NIDO DELLE ARPIE
+      // Scene 10: GRIGLIA TATTICA — TETTO DELLA TORRE
       SceneData(
         backgroundAsset: 'assets/images/guglia_troll_griglia_tetto.jpg',
         gmNotes: GmNotesData(
-          sectionTitle: "GRIGLIA TATTICA — TETTO / NIDO DELLE ARPIE",
+          sectionTitle: "GRIGLIA TATTICA — TETTO DELLA TORRE",
           readAloud:
-              "GUGLIA DEL TROLL — MAPPA TATTICA TETTO / NIDO ARPIE\n"
+              "GUGLIA DEL TROLL — MAPPA TATTICA TETTO\n"
               "Visuale tattica del tetto a cielo aperto con la pozza d'acqua ed i cespugli di rose.",
           narrative:
               "✦ Mappa Tattica Tetto: Zona di scontro con le tre arpie Cardo, Aculeo e Spina.\n\n"
