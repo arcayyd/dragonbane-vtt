@@ -1,0 +1,513 @@
+{
+  "roomCode": "DRGN1",
+  "activeMapId": "villaggio_orlo",
+  "characters": {
+    "pc_krag": {
+      "id": "pc_krag",
+      "name": "Krag del Picco di Pietra",
+      "stirpe": "Nano",
+      "professione": "Guerriero",
+      "debolezza": "Gola insaziabile",
+      "forta": 15,
+      "costituzione": 14,
+      "agilita": 11,
+      "intelligenza": 9,
+      "volonta": 10,
+      "carisma": 11,
+      "esausto": false,
+      "malaticcio": false,
+      "disorientato": false,
+      "arrabbiato": false,
+      "spaventato": false,
+      "scoraggiato": false,
+      "hp": 14,
+      "maxHp": 14,
+      "wp": 10,
+      "maxWp": 10,
+      "skills": {
+        "Artigianato (FOR)": 10,
+        "Acrobazia (AGI)": 5,
+        "Consapevolezza (INT)": 8,
+        "Spade (FOR)": 14,
+        "Asce (FOR)": 12,
+        "Rissa (FOR)": 10,
+        "Sfuggire (AGI)": 8
+      },
+      "weapons": [
+        {
+          "name": "Spada Lunga",
+          "attribute": "FOR",
+          "damage": "2d6",
+          "range": "Mischia",
+          "durability": 0,
+          "qualities": "Tagliente"
+        },
+        {
+          "name": "Ascia da Battaglia",
+          "attribute": "FOR",
+          "damage": "2d8",
+          "range": "Mischia",
+          "durability": 0,
+          "qualities": "Pesante"
+        }
+      ],
+      "inventory": [
+        "Scudo di legno",
+        "Razionamenti x3",
+        "Corda di canapa"
+      ],
+      "isNpc": false,
+      "gmNotes": ""
+    },
+    "pc_valeria": {
+      "id": "pc_valeria",
+      "name": "Valeria la Silente",
+      "stirpe": "Umano",
+      "professione": "Ladra",
+      "debolezza": "Estremamente avara",
+      "forta": 10,
+      "costituzione": 11,
+      "agilita": 15,
+      "intelligenza": 13,
+      "volonta": 11,
+      "carisma": 12,
+      "esausto": false,
+      "malaticcio": false,
+      "disorientato": false,
+      "arrabbiato": false,
+      "spaventato": false,
+      "scoraggiato": false,
+      "hp": 11,
+      "maxHp": 11,
+      "wp": 11,
+      "maxWp": 11,
+      "skills": {
+        "Sgattaiolare (AGI)": 15,
+        "Sfuggire (AGI)": 12,
+        "Rapidità di Mano (AGI)": 14,
+        "Localizzare (INT)": 10,
+        "Coltelli (AGI)": 13,
+        "Archi (AGI)": 10,
+        "Consapevolezza (INT)": 11
+      },
+      "weapons": [
+        {
+          "name": "Daga d'Acciaio",
+          "attribute": "AGI",
+          "damage": "1d6+1",
+          "range": "Mischia",
+          "durability": 0,
+          "qualities": "Sottile"
+        },
+        {
+          "name": "Arco Corto",
+          "attribute": "AGI",
+          "damage": "1d8",
+          "range": "Distanza",
+          "durability": 0,
+          "qualities": "Perforante"
+        }
+      ],
+      "inventory": [
+        "Attrezzi da scasso",
+        "Mantello scuro",
+        "Lanterna cieca"
+      ],
+      "isNpc": false,
+      "gmNotes": ""
+    },
+    "npc_goblin": {
+      "id": "npc_goblin",
+      "name": "Goblin della Valle",
+      "stirpe": "Goblin",
+      "professione": "Scaricatore",
+      "debolezza": "",
+      "forta": 8,
+      "costituzione": 9,
+      "agilita": 13,
+      "intelligenza": 8,
+      "volonta": 9,
+      "carisma": 6,
+      "esausto": false,
+      "malaticcio": false,
+      "disorientato": false,
+      "arrabbiato": false,
+      "spaventato": false,
+      "scoraggiato": false,
+      "hp": 9,
+      "maxHp": 9,
+      "wp": 9,
+      "maxWp": 9,
+      "skills": {
+        "Sgattaiolare (AGI)": 12,
+        "Coltelli (AGI)": 10,
+        "Sfuggire (AGI)": 9
+      },
+      "weapons": [
+        {
+          "name": "Archetto Rustico",
+          "attribute": "AGI",
+          "damage": "1d6",
+          "range": "Distanza",
+          "durability": 0,
+          "qualities": ""
+        }
+      ],
+      "inventory": [
+        "Pietre levigate",
+        "Dente fortunato"
+      ],
+      "isNpc": true,
+      "gmNotes": "Codardo. Scappa se perde più di metà dei punti ferita. Teme il fuoco."
+    },
+    "npc_goblin_ricognitore": {
+      "id": "npc_goblin_ricognitore",
+      "name": "Goblin Ricognitore",
+      "stirpe": "Goblin",
+      "professione": "Ricognitore",
+      "debolezza": "",
+      "forta": 8,
+      "costituzione": 9,
+      "agilita": 13,
+      "intelligenza": 8,
+      "volonta": 9,
+      "carisma": 6,
+      "esausto": false,
+      "malaticcio": false,
+      "disorientato": false,
+      "arrabbiato": false,
+      "spaventato": false,
+      "scoraggiato": false,
+      "hp": 9,
+      "maxHp": 9,
+      "wp": 9,
+      "maxWp": 9,
+      "skills": {
+        "Consapevolezza (INT)": 10,
+        "Sfuggire (AGI)": 10,
+        "Sgattaiolare (AGI)": 12
+      },
+      "weapons": [
+        {
+          "name": "Arco Corto",
+          "attribute": "AGI",
+          "damage": "1d10",
+          "range": "Distanza",
+          "durability": 0,
+          "qualities": ""
+        },
+        {
+          "name": "Spada Corta",
+          "attribute": "AGI",
+          "damage": "1d10",
+          "range": "Mischia",
+          "durability": 0,
+          "qualities": ""
+        }
+      ],
+      "inventory": [
+        "Pelle di lupo",
+        "Marchio di Maladûk"
+      ],
+      "isNpc": true,
+      "gmNotes": "Marchio nero di Maladûk sulla spalla destra. Danno Bonus: AGI +D4. Armatura: Cuoio (1)."
+    },
+    "npc_cavalcawarg": {
+      "id": "npc_cavalcawarg",
+      "name": "Il Cavalcawarg",
+      "stirpe": "Goblin & Warg",
+      "professione": "Comandante",
+      "debolezza": "",
+      "forta": 14,
+      "costituzione": 13,
+      "agilita": 12,
+      "intelligenza": 8,
+      "volonta": 10,
+      "carisma": 10,
+      "esausto": false,
+      "malaticcio": false,
+      "disorientato": false,
+      "arrabbiato": false,
+      "spaventato": false,
+      "scoraggiato": false,
+      "hp": 24,
+      "maxHp": 24,
+      "wp": 10,
+      "maxWp": 10,
+      "skills": {
+        "Consapevolezza (INT)": 10,
+        "Sfuggire (AGI)": 10
+      },
+      "weapons": [
+        {
+          "name": "Scimitarra Seghettata",
+          "attribute": "FOR",
+          "damage": "3d6",
+          "range": "Mischia",
+          "durability": 0,
+          "qualities": ""
+        },
+        {
+          "name": "Lancia Lunga",
+          "attribute": "FOR",
+          "damage": "3d8",
+          "range": "Mischia",
+          "durability": 0,
+          "qualities": ""
+        }
+      ],
+      "inventory": [
+        "Warg Sanguinario",
+        "Simbolo di Sathmog"
+      ],
+      "isNpc": true,
+      "gmNotes": "Ferocia: 2. Taglia: Normale. Conta come mostro. Attacchi mostruosi D6."
+    }
+  },
+  "tokens": [
+    {
+      "tokenId": "token_krag",
+      "characterId": "pc_krag",
+      "name": "Krag",
+      "x": 25,
+      "y": 55,
+      "isGmOnly": false,
+      "isNpc": false,
+      "targetedByPlayerId": null
+    },
+    {
+      "tokenId": "token_valeria",
+      "characterId": "pc_valeria",
+      "name": "Valeria",
+      "x": 28,
+      "y": 60,
+      "isGmOnly": false,
+      "isNpc": false,
+      "targetedByPlayerId": null
+    },
+    {
+      "tokenId": "token_goblin1",
+      "characterId": "npc_goblin",
+      "name": "Goblin Sentinella",
+      "x": 65,
+      "y": 45,
+      "isGmOnly": false,
+      "isNpc": true,
+      "targetedByPlayerId": null
+    },
+    {
+      "tokenId": "token_goblin_boss",
+      "characterId": "npc_goblin",
+      "name": "Goblin Capo (Nascosto)",
+      "x": 75,
+      "y": 35,
+      "isGmOnly": true,
+      "isNpc": true,
+      "targetedByPlayerId": null
+    }
+  ],
+  "rollLog": [],
+  "playerSelections": {
+    "gm_user": "gm_profile",
+    "game_master": "gm_profile",
+    "mappa_player": ""
+  },
+  "mapNodes": [
+    {
+      "id": "outskirt",
+      "name": "Orlo",
+      "description": "",
+      "xPercent": 54.9,
+      "yPercent": 59,
+      "isGmOnly": false,
+      "isLocked": false,
+      "targetSubMap": "villaggio_orlo"
+    },
+    {
+      "id": "tempio_ruine",
+      "name": "Foresta di Ferro",
+      "description": "",
+      "xPercent": 26.6,
+      "yPercent": 46.9,
+      "isGmOnly": false,
+      "isLocked": true,
+      "targetSubMap": "foresta_ferro"
+    },
+    {
+      "id": "forte_ghiaccio",
+      "name": "Paludi Infestate",
+      "description": "",
+      "xPercent": 75.8,
+      "yPercent": 56.6,
+      "isGmOnly": false,
+      "isLocked": true,
+      "targetSubMap": "paludi_infestate"
+    },
+    {
+      "id": "palude_morte",
+      "name": "Passo di Drakmar",
+      "description": "",
+      "xPercent": 49.9,
+      "yPercent": 68.5,
+      "isGmOnly": false,
+      "isLocked": true,
+      "targetSubMap": "passo_drakmar"
+    },
+    {
+      "id": "tomba_segreta",
+      "name": "Boscomagno",
+      "description": "",
+      "xPercent": 51.7,
+      "yPercent": 36.3,
+      "isGmOnly": false,
+      "isLocked": true,
+      "targetSubMap": "bosco_magno"
+    },
+    {
+      "id": "node_1783167020493",
+      "name": "Lago Specchiato",
+      "description": "",
+      "xPercent": 38.4,
+      "yPercent": 28.5,
+      "isGmOnly": false,
+      "isLocked": true,
+      "targetSubMap": "lago_specchiato"
+    },
+    {
+      "id": "node_1783167048858",
+      "name": "Picchi Zanna del Drago",
+      "description": "",
+      "xPercent": 26.8,
+      "yPercent": 17.2,
+      "isGmOnly": false,
+      "isLocked": true,
+      "targetSubMap": "picchi_zanna_drago"
+    },
+    {
+      "id": "node_1783168064041",
+      "name": "Forte Malus",
+      "description": "",
+      "xPercent": 24.1,
+      "yPercent": 27.5,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "forte_malus"
+    },
+    {
+      "id": "node_1783168101643",
+      "name": "Guglia del Troll",
+      "description": "",
+      "xPercent": 20.7,
+      "yPercent": 36.7,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "guglia_troll"
+    },
+    {
+      "id": "node_1783168124194",
+      "name": "Caverna dell'Oracolo",
+      "description": "",
+      "xPercent": 19.6,
+      "yPercent": 62,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "caverna_oracolo"
+    },
+    {
+      "id": "node_1783168161987",
+      "name": "Cripta del Cavaliere",
+      "description": "",
+      "xPercent": 37.6,
+      "yPercent": 55.8,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "cripta_cavaliere"
+    },
+    {
+      "id": "node_1783168208959",
+      "name": "Breccia Bucaprofonda",
+      "description": "",
+      "xPercent": 34.5,
+      "yPercent": 64.1,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "breccia_bucaprofonda"
+    },
+    {
+      "id": "node_1783168273158",
+      "name": "Sentiero",
+      "description": "",
+      "xPercent": 48.3,
+      "yPercent": 78.2,
+      "isGmOnly": false,
+      "isLocked": false,
+      "targetSubMap": "sentiero_iniziale"
+    },
+    {
+      "id": "node_1783168303755",
+      "name": "Isola della Nebbia",
+      "description": "",
+      "xPercent": 42.2,
+      "yPercent": 27.1,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "isola_nebbia"
+    },
+    {
+      "id": "node_1783168345046",
+      "name": "Tempio della Fiamma Purpurea",
+      "description": "",
+      "xPercent": 56.2,
+      "yPercent": 35,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "tempio_fiamma_purpurea"
+    },
+    {
+      "id": "node_1783168369070",
+      "name": "Villaggio del Giorno Prima",
+      "description": "",
+      "xPercent": 71.4,
+      "yPercent": 34,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "villaggio_giorno_prima"
+    },
+    {
+      "id": "node_1783168410386",
+      "name": "Torre dei Sospiri",
+      "description": "",
+      "xPercent": 78.8,
+      "yPercent": 49.2,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "torre_sospiri"
+    },
+    {
+      "id": "node_1783168450873",
+      "name": "Locanda Fine Strada",
+      "description": "",
+      "xPercent": 69.2,
+      "yPercent": 55.5,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "locanda_fine_strada"
+    },
+    {
+      "id": "node_1783168485335",
+      "name": "Caverna degli Occhi Morti",
+      "description": "",
+      "xPercent": 66.9,
+      "yPercent": 77,
+      "isGmOnly": true,
+      "isLocked": false,
+      "targetSubMap": "caverna_occhi_morti"
+    }
+  ],
+  "revealedHandouts": {
+    "sentiero_iniziale": 4,
+    "overworld": 0,
+    "villaggio_orlo": 0,
+    "show_maladuk_symbol": 0
+  }
+}

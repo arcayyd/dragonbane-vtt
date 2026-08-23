@@ -1,0 +1,69 @@
+name: dragonbane_vtt
+description: A custom Virtual Tabletop application for the Dragonbane TTRPG.
+version: 1.0.0+1
+
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.1.0
+  provider: ^6.1.1
+  http: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/rules_reference.json
+    - assets/data/overworld_map.json
+    - assets/maps/mappa_valle.png
+    - assets/images/character_sheet_background.png
+    - assets/images/sentiero_tattico.png
+    - assets/images/passo_handout.jpg
+    - assets/images/uomo_perduto.jpg
+    - assets/images/problemi_in_vista.jpg
+    - assets/images/simbolo_maladuk.png
+    - assets/images/orlo_cinematic.jpg
+    - assets/images/hardy_portrait.jpg
+    - assets/images/orlo_village_map_v2.jpg
+    - assets/images/cavalcawarg_handout.jpg
+    - assets/images/tre_cervi_inn.jpg
+    - assets/images/tre_cervi_interno.jpg
+    - assets/images/tre_cervi_stanze.jpg
+    - assets/images/vagnhild.jpg
+    - assets/images/valeria_portrait.jpg
+    - assets/images/coloni.jpg
+    - assets/images/dranath_mallard.jpg
+    - assets/images/guerriera_armatura.jpg
+    - assets/images/ulvar.jpg
+    - assets/images/jory.jpg
+    - assets/images/annabella.jpg
+    - assets/images/dranath.jpg
+    - assets/images/badinor.jpg
+    - assets/images/oda_e_medvin.jpg
+    - assets/images/orlo_piazza.jpg
+    - assets/images/orlo_fucina.jpg
+    - assets/images/orlo_troll.jpg
+    - assets/images/orlo_torre.jpg
+    - assets/images/guglia_troll_intro.jpg
+    - assets/images/guglia_troll_salone.jpg
+    - assets/images/guglia_troll_cucina.jpg
+    - assets/images/guglia_troll_abitazione.jpg
+    - assets/images/guglia_troll_laboratorio.jpg
+    - assets/images/guglia_troll_arpie.jpg
+    - assets/images/guglia_troll_vista_valle.jpg
+    - assets/images/arpie_handout.jpg
+    - assets/images/arpie_statblock.jpg
+    - assets/images/harga_handout.jpg
+    - assets/images/harga_statblock.png
+    - assets/images/ambrosius_handout.png
+    - assets/images/ambrosius_statblock.png

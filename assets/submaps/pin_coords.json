@@ -1,0 +1,19 @@
+{
+  "_comment": "Coordinate pin per le sottomappe di Orlo. Formato: xFraction e yFraction sono valori 0.0-1.0 relativi all'immagine.",
+  "_how_to_add": "Aggiungere un nuovo blocco con chiave = mapId usato in scene_registry.dart. Poi in Dart: mapPins: VttSubMapPins.orlo (o il nome che hai dato).",
+
+  "outskirt_village": [
+    { "label": "1",  "name": "Cancello Sud",            "x": 0.50, "y": 0.84 },
+    { "label": "2A", "name": "Torre Guardia Sud-Est",   "x": 0.76, "y": 0.59 },
+    { "label": "2B", "name": "Torrione Nord",           "x": 0.56, "y": 0.18 },
+    { "label": "3",  "name": "Statua",                  "x": 0.45, "y": 0.29 },
+    { "label": "4",  "name": "Casa di Vagnhild",        "x": 0.41, "y": 0.36 },
+    { "label": "5",  "name": "Negozio di Mastro Ulvar", "x": 0.38, "y": 0.23 },
+    { "label": "6",  "name": "Forgia",                  "x": 0.33, "y": 0.29 },
+    { "label": "7",  "name": "Locanda Tre Cervi",       "x": 0.47, "y": 0.66 },
+    { "label": "8",  "name": "Pozzo",                   "x": 0.60, "y": 0.41 },
+    { "label": "9",  "name": "Formazioni Rocciose",     "x": 0.47, "y": 0.47 },
+    { "label": "10", "name": "Edificio Misterioso",     "x": 0.54, "y": 0.53 },
+    { "label": "1",  "name": "Edificio Est",            "x": 0.84, "y": 0.38 }
+  ]
+}

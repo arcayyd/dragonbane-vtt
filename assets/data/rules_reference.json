@@ -1,0 +1,54 @@
+{
+  "systemName": "Dragonbane (Free League)",
+  "language": "it",
+  "attributes": {
+    "FOR": { "name": "Forza", "abbreviation": "FOR", "description": "Forza fisica e potenza muscolare." },
+    "COS": { "name": "Costituzione", "abbreviation": "COS", "description": "Salute, resistenza fisica e tempra." },
+    "AGI": { "name": "Agilità", "abbreviation": "AGI", "description": "Velocità, riflessi e destrezza manuale." },
+    "INT": { "name": "Intelligenza", "abbreviation": "INT", "description": "Risoluzione di problemi, memoria e percezione." },
+    "VOL": { "name": "Volontà", "abbreviation": "VOL", "description": "Forza mentale, determinazione e potere magico." },
+    "CAR": { "name": "Carisma", "abbreviation": "CAR", "description": "Presenza sociale, leadership e fascino." }
+  },
+  "conditions": {
+    "esausto": { "name": "Esausto", "attribute": "FOR", "description": "Infligge Sciagura alle prove di FORZA e alle abilità collegate." },
+    "malaticcio": { "name": "Malaticcio", "attribute": "COS", "description": "Infligge Sciagura alle prove di COSTITUZIONE e alle abilità collegate." },
+    "disorientato": { "name": "Disorientato", "attribute": "AGI", "description": "Infligge Sciagura alle prove di AGILITÀ e alle abilità collegate (compresa l'iniziativa)." },
+    "arrabbiato": { "name": "Arrabbiato", "attribute": "INT", "description": "Infligge Sciagura alle prove di INTELLIGENZA e alle abilità collegate." },
+    "spaventato": { "name": "Spaventato", "attribute": "VOL", "description": "Infligge Sciagura alle prove di VOLONTÀ e alle abilità collegate (compreso il lancio di incantesimi)." },
+    "scoraggiato": { "name": "Scoraggiato", "attribute": "CAR", "description": "Infligge Sciagura alle prove di CARISMA e alle abilità collegate." }
+  },
+  "skills": [
+    { "name": "Acrobazia", "attribute": "AGI", "englishName": "Acrobatics" },
+    { "name": "Artigianato", "attribute": "FOR", "englishName": "Crafting" },
+    { "name": "Caccia e Pesca", "attribute": "AGI", "englishName": "Hunting & Fishing" },
+    { "name": "Cavalcare", "attribute": "AGI", "englishName": "Riding" },
+    { "name": "Consapevolezza", "attribute": "INT", "englishName": "Awareness" },
+    { "name": "Contrattare", "attribute": "CAR", "englishName": "Bartering" },
+    { "name": "Esibirsi", "attribute": "CAR", "englishName": "Performance" },
+    { "name": "Guarire", "attribute": "INT", "englishName": "Healing" },
+    { "name": "Imbrogliare", "attribute": "CAR", "englishName": "Bluffing" },
+    { "name": "Linguaggi", "attribute": "INT", "englishName": "Languages" },
+    { "name": "Localizzare", "attribute": "INT", "englishName": "Spotting" },
+    { "name": "Miti e Leggende", "attribute": "INT", "englishName": "Myths & Legends" },
+    { "name": "Navigare", "attribute": "INT", "englishName": "Seafaring" },
+    { "name": "Nuotare", "attribute": "AGI", "englishName": "Swimming" },
+    { "name": "Persuadere", "attribute": "CAR", "englishName": "Persuasion" },
+    { "name": "Rapidità di Mano", "attribute": "AGI", "englishName": "Sleight of Hand" },
+    { "name": "Sapienza Animale", "attribute": "INT", "englishName": "Beast Lore" },
+    { "name": "Sfuggire", "attribute": "AGI", "englishName": "Evading" },
+    { "name": "Sgattaiolare", "attribute": "AGI", "englishName": "Sneaking" },
+    { "name": "Sopravvivenza", "attribute": "INT", "englishName": "Survival" }
+  ],
+  "weaponSkills": [
+    { "name": "Archi", "attribute": "AGI", "englishName": "Bows" },
+    { "name": "Asce", "attribute": "FOR", "englishName": "Axes" },
+    { "name": "Balestre", "attribute": "AGI", "englishName": "Crossbows" },
+    { "name": "Bastoni", "attribute": "AGI", "englishName": "Staves" },
+    { "name": "Coltelli", "attribute": "AGI", "englishName": "Knives" },
+    { "name": "Frombole", "attribute": "AGI", "englishName": "Slings" },
+    { "name": "Lance", "attribute": "FOR", "englishName": "Spears" },
+    { "name": "Martelli", "attribute": "FOR", "englishName": "Hammers" },
+    { "name": "Rissa", "attribute": "FOR", "englishName": "Brawling" },
+    { "name": "Spade", "attribute": "FOR", "englishName": "Swords" }
+  ]
+}
