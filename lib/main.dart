@@ -254,11 +254,11 @@ class _MainLayoutState extends State<MainLayout> {
                           ),
                           child: Text(
                             "ORLO",
-                            style: GoogleFonts.cinzel(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
+                            style: GoogleFonts.cinzel(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 11),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      const SizedBox(width: 6),
                       Expanded(
                         child: ElevatedButton(
                           onPressed: () {
@@ -273,7 +273,26 @@ class _MainLayoutState extends State<MainLayout> {
                           ),
                           child: Text(
                             "VIAGGI",
-                            style: GoogleFonts.cinzel(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
+                            style: GoogleFonts.cinzel(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 11),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setModalState(() {
+                              activeCategory = 'pg';
+                            });
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeCategory == 'pg' ? VttTheme.primary : const Color(0xff2d221a),
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                          ),
+                          child: Text(
+                            "PG GIOCANTI",
+                            style: GoogleFonts.cinzel(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 11),
                           ),
                         ),
                       ),

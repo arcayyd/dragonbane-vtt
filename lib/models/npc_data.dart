@@ -282,4 +282,31 @@ const List<NpcData> npcList = [
     weapons: [],
     abilities: ['Saggezza Popolare'],
   ),
+
+  // --- PG GIOCANTI ---
+  NpcData(
+    id: 'pg_durnak',
+    name: 'Durnak',
+    category: 'pg',
+    imageAsset: 'assets/images/durnak.jpg',
+    description:
+        "Durnak è un possente nano fabbro ed avventuriero, armato di un pesante maglio da guerra "
+        "e guidato dall'onore delle antiche tradizioni dei nani. Robusto, leale ed incrollabile in battaglia.",
+    stats: [
+      'Movimento: 8',
+      'PF (Punti Ferita): 18',
+      'PV (Punti Volontà): 14',
+      'Armatura: Grembiule di cuoio rinforzato (3)',
+    ],
+    skills: [
+      'Artigianato (Fabbro): 16',
+      'Martelli: 15',
+      'Resistenza / COS: 16',
+      'Consapevolezza: 12',
+    ],
+    weapons: [
+      'Maglio da Guerra Pesante (Abilità: 15, Danno: 2D8+2)',
+    ],
+    abilities: ['Resistenza Nanica', 'Mastro Fabbro'],
+  ),
 ];
