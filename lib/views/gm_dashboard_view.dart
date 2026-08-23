@@ -89,6 +89,13 @@ class GmDashboardView extends StatelessWidget {
                           ),
                           child: const Text("LOCANDA: STANZE"),
                         ),
+                        ElevatedButton(
+                          onPressed: () => syncService.changeActiveMap('orlo_negozio'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: room.activeMapId == 'orlo_negozio' ? VttTheme.primary : VttTheme.surfaceLight,
+                          ),
+                          child: const Text("NEGOZIO DI ULVAR"),
+                        ),
                       ],
                     ),
                   ],

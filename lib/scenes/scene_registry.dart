@@ -1191,4 +1191,37 @@ const Map<String, SceneConfig> sceneRegistry = {
       ),
     ],
   ),
+  'orlo_negozio': SceneConfig(
+    mapId: 'orlo_negozio',
+    defaultBackground: 'assets/images/orlo_negozio_esterno.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      // Scene 0: Esterno Negozio
+      SceneData(
+        backgroundAsset: 'assets/images/orlo_negozio_esterno.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "5. NEGOZIO DI MASTRO ULVAR (ESTERNO)",
+          readAloud:
+              "Un rustico emporio a graticcio con un'insegna in legno 'Da Mastro Ulvar - Emporio'. "
+              "Fuori dall'ingresso, un recinto in legno ospita diverse caprette che brucano fieno tra le pietre del villaggio.",
+          narrative:
+              "✦ Emporio di Orlo: Questo è il negozio generale del villaggio dove gli avventurieri possono rifornirsi di provviste, attrezzi e attrezzatura da viaggio.\n\n"
+              "✦ Mastro Ulvar e Jory: Il negozio è gestito da Mastro Ulvar, un uomo pratico ed onesto, insieme a suo figlio Jory (allievo di Hardy).",
+        ),
+      ),
+      // Scene 1: Interno Negozio
+      SceneData(
+        backgroundAsset: 'assets/images/orlo_negozio_interno.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "5. NEGOZIO DI MASTRO ULVAR (INTERNO)",
+          readAloud:
+              "L'interno è caldo e stipato di ogni tipo di merce: scaffali carichi di barattoli, corde, lanterne, scorte di pane, formaggio, zaini e stivali da viaggio. "
+              "Una capra vaga tranquillamente tra le ceste sgranocchiando erba fresche.",
+          narrative:
+              "✦ Merce Disponibile: Tutti gli oggetti Comuni da viaggio ed equipaggiamento da avventura del Manuale Base (pag. 80-82) sono disponibili qui a prezzi standard.\n\n"
+              "✦ Pettegolezzi: Ulvar sa che molti avventurieri sono diretti verso la Guglia del Troll e raccomanda di non viaggiare senza corde, torce e razioni fresche.",
+        ),
+      ),
+    ],
+  ),
 };

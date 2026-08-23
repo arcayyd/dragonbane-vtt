@@ -397,6 +397,7 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
     'cultisti_impiccati': 0,
     'cavaliere_drago': 0,
     'foresta': 0,
+    'orlo_negozio': 1,
   };
 
   Future<void> revealHandout(String mapId) async {

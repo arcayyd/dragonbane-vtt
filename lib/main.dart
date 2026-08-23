@@ -578,6 +578,51 @@ class _MainLayoutState extends State<MainLayout> {
                                   ),
                                 ),
                               ),
+                              InkWell(
+                                onTap: () {
+                                  syncService.changeActiveMap('orlo_negozio');
+                                  onSelectMap?.call();
+                                  Navigator.pop(context);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: const Text("Spostamento al 'Negozio di Mastro Ulvar' avvenuto per tutti!"),
+                                      backgroundColor: Colors.green[800],
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xff2d221a),
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                      color: syncService.currentRoom?.activeMapId == 'orlo_negozio' ? Colors.green : const Color(0xff4a3b32),
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  padding: const EdgeInsets.all(8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const CircleAvatar(
+                                        backgroundImage: AssetImage('assets/images/orlo_negozio_esterno.jpg'),
+                                        radius: 26,
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Text(
+                                        "Negozio di Ulvar".toUpperCase(),
+                                        style: GoogleFonts.cinzel(
+                                          color: syncService.currentRoom?.activeMapId == 'orlo_negozio' ? Colors.green[200] : Colors.white,
+                                          fontSize: 9,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ],
                           )
                         : (activeTravelSubCategory == 'attorno_orlo'
