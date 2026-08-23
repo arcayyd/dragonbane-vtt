@@ -282,6 +282,30 @@ const List<NpcData> npcList = [
     weapons: [],
     abilities: ['Saggezza Popolare'],
   ),
+  NpcData(
+    id: 'npc_lilly',
+    name: 'Lilly',
+    category: 'viaggi',
+    imageAsset: 'assets/images/lilly.jpg',
+    description:
+        "Lilly è una giovane ed espressiva ragazza dai capelli rossi che viaggia lungo i sentieri della regione. "
+        "Intelligente, osservatrice e risoluta, conosce molte scorciatoie e storie locali sui pericoli della valle.",
+    stats: [
+      'Movimento: 10',
+      'PF (Punti Ferita): 10',
+      'PV (Punti Volontà): 14',
+    ],
+    skills: [
+      'Consapevolezza: 14',
+      'Furtività: 14',
+      'Miti e Leggende: 12',
+      'Persuadere: 12',
+    ],
+    weapons: [
+      'Pugnale (Abilità: 10, Danno: D8)',
+    ],
+    abilities: ['Conoscenza delle Scorciatoie', 'Spirito Curioso'],
+  ),
 
   // --- PG GIOCANTI ---
   NpcData(
@@ -333,5 +357,57 @@ const List<NpcData> npcList = [
       'Bastone da Passeggio Intagliato (Abilità: 12, Danno: D8)',
     ],
     abilities: ['Compagni Corvi', 'Padronanza Arcana'],
+  ),
+  NpcData(
+    id: 'pg_capricorn',
+    name: 'Capricorn',
+    category: 'pg',
+    imageAsset: 'assets/images/capricorn.jpg',
+    description:
+        "Capricorn è un feroce e scattante cacciatore licantropo / lupin. Dominatore delle selve, "
+        "impugna uno spadone a due mani con micidiale maestria e fiuta le minacce a grande distanza.",
+    stats: [
+      'Movimento: 14',
+      'PF (Punti Ferita): 16',
+      'PV (Punti Volontà): 12',
+      'Armatura: Cuoio rinforzato e pellicce (3)',
+    ],
+    skills: [
+      'Spade (Spadone): 16',
+      'Consapevolezza (Olfatto / Udito): 16',
+      'Atletica / Acrobatica: 14',
+      'Furtività: 14',
+    ],
+    weapons: [
+      'Spadone Pesante a Due Mani (Abilità: 16, Danno: 2D8+2)',
+      'Artigli (Abilità: 14, Danno: D6+2)',
+    ],
+    abilities: ['Senso del Segugio', 'Attacco di Furia'],
+  ),
+  NpcData(
+    id: 'pg_gilberd',
+    name: 'Gilberd',
+    category: 'pg',
+    imageAsset: 'assets/images/gilberd.jpg',
+    description:
+        "Gilberd è un'astuta ed elegante anatra antropomorfa (Mallard), maestro di inganni, scassinatore e duellante d'affondo. "
+        "Agile, elegante e sempre un passo avanti ai suoi nemici ed ai guardiani dei tesori.",
+    stats: [
+      'Movimento: 12',
+      'PF (Punti Ferita): 14',
+      'PV (Punti Volontà): 14',
+      'Armatura: Giacchetto in cuoio lavorato e gilet (2)',
+    ],
+    skills: [
+      'Furtività: 16',
+      'Destrezza Manuale / Scassinare: 16',
+      'Stocco / Pugnale: 15',
+      'Persuadere / Raggirare: 14',
+    ],
+    weapons: [
+      'Stocco Finemente Decorato (Abilità: 15, Danno: D10+1)',
+      'Pugnale da Lancio (Abilità: 14, Danno: D8)',
+    ],
+    abilities: ['Tiro Furtivo', 'Riflessi di Anatra'],
   ),
 ];
