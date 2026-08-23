@@ -94,6 +94,8 @@ class _SubMapViewState extends State<SubMapView> {
       case 'orlo_tempio': return "Area del Tempio";
       case 'orlo_capanno_dranath': return "Capanno di Dranath";
       case 'orlo_mulino_halfling': return "Mulino e Panetteria Halfling";
+      case 'npc_quasimodo': return "Quasimodo";
+      case 'npc_sgherri_quasimodo': return "Sgherri di Quasimodo";
       default: return "Località Locale";
     }
   }

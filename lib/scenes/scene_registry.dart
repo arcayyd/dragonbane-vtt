@@ -1186,4 +1186,79 @@ const Map<String, SceneConfig> sceneRegistry = {
       ),
     ],
   ),
+  'npc_quasimodo': SceneConfig(
+    mapId: 'npc_quasimodo',
+    defaultBackground: 'assets/images/quasimodo.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      SceneData(
+        handout: HandoutData(
+          title: 'QUASIMODO',
+          asset: 'assets/images/quasimodo.jpg',
+          layout: HandoutLayout.centered,
+        ),
+        gmStatBlock: StatBlockData(
+          name: 'QUASIMODO',
+          description:
+              "Misteriosa ed enigmatica anatra antropomorfa (Mallard) ricoperta da un manto scuro e da un cappuccio. "
+              "È un furfante esperto ed infido che trama nell'ombra attorno al villaggio di Orlo, dirigendo la sua banda di sgherri.",
+          stats: [
+            StatEntry('Movimento', '12'),
+            StatEntry('PF', '13'),
+            StatEntry('PV', '14'),
+            StatEntry('Armatura', 'Cuoio borchiato (2)'),
+          ],
+          skills: [
+            StatEntry('Furtività', '16'),
+            StatEntry('Combattimento', '14'),
+            StatEntry('Slealtà / Raggirare', '15'),
+            StatEntry('Consapevolezza', '13'),
+          ],
+          abilities: ['Mimetismo nell\'ombra', 'Attacco di Sorpresa'],
+          weapons: [
+            WeaponEntry('Pugnale avvelenato', '16', '1D8 + Veleno'),
+            WeaponEntry('Balestra leggera', '14', '2D6'),
+          ],
+        ),
+      ),
+    ],
+  ),
+  'npc_sgherri_quasimodo': SceneConfig(
+    mapId: 'npc_sgherri_quasimodo',
+    defaultBackground: 'assets/images/sgherri_quasimodo.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      SceneData(
+        handout: HandoutData(
+          title: 'SGHERRI DI QUASIMODO',
+          asset: 'assets/images/sgherri_quasimodo.jpg',
+          layout: HandoutLayout.centered,
+        ),
+        gmStatBlock: StatBlockData(
+          name: 'SGHERRI DI QUASIMODO',
+          description:
+              "Una banda di tre spietati mercenari e tagliagole al soldo di Quasimodo: "
+              "un subdolo assassino armato di pugnale insanguinato, un possente bruto armato di spadone "
+              "ed una letale alchimista esperta in veleni paralizzanti.",
+          stats: [
+            StatEntry('Movimento', '10'),
+            StatEntry('PF', '15 per sgherro'),
+            StatEntry('PV', '10'),
+            StatEntry('Armatura', 'Cuoio rinforzato (2)'),
+          ],
+          skills: [
+            StatEntry('Combattimento', '14'),
+            StatEntry('Rissa', '13'),
+            StatEntry('Furtività', '12'),
+          ],
+          abilities: ['Tattiche di Gruppo', 'Accerchiamento'],
+          weapons: [
+            WeaponEntry('Spadone a due mani', '14', '2D6+2'),
+            WeaponEntry('Pugnali doppi', '15', '1D8'),
+            WeaponEntry('Veleno Alchemico', '—', 'Paralizzante'),
+          ],
+        ),
+      ),
+    ],
+  ),
 };

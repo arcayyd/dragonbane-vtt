@@ -92,9 +92,63 @@ const List<NpcData> npcList = [
     ],
     weapons: [
       'Spadone (Abilità: 14, Danno: 2D6)',
-      'Balestra Pesante (Abilità: 12, Danno: 2D8)',
+      'Balestra pesante (Abilità: 12, Danno: 2D8)',
+      'Scudo grande',
     ],
     abilities: ['Difensivo', 'Veterano'],
+  ),
+  NpcData(
+    id: 'npc_quasimodo',
+    name: 'Quasimodo',
+    category: 'orlo',
+    imageAsset: 'assets/images/quasimodo.jpg',
+    description:
+        "Misteriosa ed enigmatica anatra antropomorfa (Mallard) ricoperta da un manto scuro e da un cappuccio. "
+        "È un furfante esperto ed infido che trama nell'ombra attorno al villaggio di Orlo, dirigendo la sua banda di sgherri.",
+    stats: [
+      'Movimento: 12',
+      'PF (Punti Ferita): 13',
+      'PV (Punti Volontà): 14',
+      'Armatura: Cuoio borchiato (2)',
+    ],
+    skills: [
+      'Furtività: 16',
+      'Combattimento: 14',
+      'Slealtà / Raggirare: 15',
+      'Consapevolezza: 13',
+    ],
+    weapons: [
+      'Pugnale avvelenato (Abilità: 16, Danno: 1D8 + Veleno)',
+      'Balestra leggera (Abilità: 14, Danno: 2D6)',
+    ],
+    abilities: ['Mimetismo nell\'ombra', 'Attacco di Sorpresa'],
+  ),
+  NpcData(
+    id: 'npc_sgherri_quasimodo',
+    name: 'Sgherri di Quasimodo',
+    category: 'orlo',
+    imageAsset: 'assets/images/sgherri_quasimodo.jpg',
+    description:
+        "Una banda di tre spietati mercenari e tagliagole al soldo di Quasimodo: "
+        "un subdolo assassino armato di pugnale insanguinato, un possente bruto armato di spadone "
+        "ed una letale alchimista esperta in veleni paralizzanti.",
+    stats: [
+      'Movimento: 10',
+      'PF (Punti Ferita): 15 per sgherro',
+      'PV (Punti Volontà): 10',
+      'Armatura: Cuoio rinforzato (2)',
+    ],
+    skills: [
+      'Combattimento: 14',
+      'Rissa: 13',
+      'Furtività: 12',
+    ],
+    weapons: [
+      'Spadone a due mani (Bruto: Abilità 14, Danno 2D6+2)',
+      'Pugnali doppi (Assassino: Abilità 15, Danno 1D8)',
+      'Boccetta di Veleno Alchemico (Alchimista: Danno paralizzante)',
+    ],
+    abilities: ['Tattiche di Gruppo', 'Accerchiamento'],
   ),
   NpcData(
     id: 'npc_alfilia_fogliombrosa',
