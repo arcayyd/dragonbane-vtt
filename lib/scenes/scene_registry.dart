@@ -804,6 +804,13 @@ const Map<String, SceneConfig> sceneRegistry = {
             icon: Icons.arrow_downward,
           ),
         ],
+        gmActions: [
+          DirectionButtonData(
+            label: "Passa alla griglia",
+            targetSceneIndex: 8,
+            icon: Icons.grid_on,
+          ),
+        ],
       ),
 
       // Scene 3: 3. ABITAZIONE ABBANDONATA
@@ -843,6 +850,13 @@ const Map<String, SceneConfig> sceneRegistry = {
             label: "OVEST: Camera da Letto",
             targetSceneIndex: 3,
             icon: Icons.arrow_back,
+          ),
+        ],
+        gmActions: [
+          DirectionButtonData(
+            label: "Passa alla griglia",
+            targetSceneIndex: 8,
+            icon: Icons.grid_on,
           ),
         ],
       ),
@@ -984,28 +998,60 @@ const Map<String, SceneConfig> sceneRegistry = {
         ],
       ),
 
-      // Scene 8: GRIGLIA TATTICA — SECONDO PIANO (Temporanea)
+      // Scene 8: GRIGLIA TATTICA — SECONDO PIANO
       SceneData(
-        backgroundAsset: 'assets/images/guglia_troll_griglia_piano1.jpg',
+        backgroundAsset: 'assets/images/guglia_troll_griglia_piano2.jpg',
         gmNotes: GmNotesData(
           sectionTitle: "GRIGLIA TATTICA — SECONDO PIANO",
           readAloud:
               "GUGLIA DEL TROLL — MAPPA TATTICA SECONDO PIANO\n"
-              "Visuale tattica su griglia del Secondo Piano della torre.",
+              "Visuale tattica su griglia del Secondo Piano della torre (Abitazione Abbandonata e Cucina).",
           narrative:
-              "✦ Mappa Tattica Secondo Piano: In attesa dell'illustrazione del secondo piano.\n\n"
-              "✦ Controlli GM: Usa 'Scendi di un piano' per tornare al primo piano o 'Torna indietro' per ripristinare la vista illustrata.",
+              "✦ Mappa Tattica Secondo Piano: Griglia con il grande tavolo di quercia (#3) e la cucina (#4).\n\n"
+              "✦ Controlli GM: Usa 'Sali di un piano' per accedere al terzo piano, 'Scendi di un piano' per tornare al primo o 'Torna indietro' per ripristinare la vista illustrata.",
         ),
         directions: [],
         gmActions: [
           DirectionButtonData(
-            label: "Scendi di un piano",
+            label: "Scendi al primo piano",
             targetSceneIndex: 7,
             icon: Icons.arrow_downward,
           ),
           DirectionButtonData(
+            label: "Sali al terzo piano",
+            targetSceneIndex: 9,
+            icon: Icons.arrow_upward,
+          ),
+          DirectionButtonData(
             label: "Torna indietro",
-            targetSceneIndex: 1,
+            targetSceneIndex: 3,
+            icon: Icons.arrow_back,
+          ),
+        ],
+      ),
+
+      // Scene 9: GRIGLIA TATTICA — TERZO PIANO
+      SceneData(
+        backgroundAsset: 'assets/images/guglia_troll_griglia_piano2.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "GRIGLIA TATTICA — TERZO PIANO",
+          readAloud:
+              "GUGLIA DEL TROLL — MAPPA TATTICA TERZO PIANO\n"
+              "Visuale tattica su griglia del Terzo Piano della torre.",
+          narrative:
+              "✦ Mappa Tattica Terzo Piano: In attesa dell'illustrazione del terzo piano.\n\n"
+              "✦ Controlli GM: Usa 'Scendi al secondo piano' per tornare al secondo piano o 'Torna indietro' per ripristinare la vista illustrata.",
+        ),
+        directions: [],
+        gmActions: [
+          DirectionButtonData(
+            label: "Scendi al secondo piano",
+            targetSceneIndex: 8,
+            icon: Icons.arrow_downward,
+          ),
+          DirectionButtonData(
+            label: "Torna indietro",
+            targetSceneIndex: 3,
             icon: Icons.arrow_back,
           ),
         ],
