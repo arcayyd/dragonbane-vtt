@@ -964,4 +964,22 @@ const Map<String, SceneConfig> sceneRegistry = {
       ),
     ],
   ),
+  'cavaliere_drago': SceneConfig(
+    mapId: 'cavaliere_drago',
+    defaultBackground: 'assets/images/cavaliere_drago.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      SceneData(
+        backgroundAsset: 'assets/images/cavaliere_drago.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "IL CAVALIERE DRAGO",
+          readAloud:
+              "EVENTO DI VIAGGIO — IL CAVALIERE DRAGO\n"
+              "Un rumore di zoccoli in rapido avvicinamento risuona nella foresta. Tra gli alberi secolari sorge un maestoso cavaliere in armatura a cavallo.",
+          narrative:
+              "Il Cavaliere Drago. I personaggi sentono un suono di zoccoli in rapido avvicinamento. Chi supera un tiro di CONSAPEVOLEZZA può nascondersi se vuole; gli altri vengono fermati da un cavaliere in armatura. Il suo nome è Tylos ed è un membro dei Custodi della Fiamma Immacolata, il cui marchio è sull’armatura. Chiede ai personaggi dove siano diretti. A prescindere da quello che dicono, devono eseguire un tiro di PERSUADERE perché lui creda alla loro storia, dato che sospetta che siano cultisti di Sathmog in viaggio verso Forte Malus (pag. 79) per liberare il loro compagno imprigionato là. Se il tiro fallisce, Tylos attacca a meno che i personaggi non dicano di essere alleati di Alfilia Fogliombrosa (pag. 22). Se riescono a calmarlo, Tylos ordina loro di seguirlo e li conduce a Forte Malus (pag. 79) per “una missione importante” (risolvere l’enigma sulla porta del sotterraneo o sfondare il pavimento, ma questo non lo rivela ora). Se i personaggi sono già stati a Forte Malus, Tylos non ne è al corrente. Se si rifiutano di seguirlo, dovranno superare un altro tiro di PERSUADERE o venire attaccati. Tylos ha le stesse statistiche e lo stesso equipaggiamento di Isadelia (pag. 84) ed è su un cavallo da guerra.",
+        ),
+      ),
+    ],
+  ),
 };
