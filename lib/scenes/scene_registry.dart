@@ -1074,7 +1074,7 @@ const Map<String, SceneConfig> sceneRegistry = {
 
       // Scene 10: GRIGLIA TATTICA — TETTO / NIDO DELLE ARPIE
       SceneData(
-        backgroundAsset: 'assets/images/guglia_troll_arpie.jpg',
+        backgroundAsset: 'assets/images/guglia_troll_griglia_tetto.jpg',
         gmNotes: GmNotesData(
           sectionTitle: "GRIGLIA TATTICA — TETTO / NIDO DELLE ARPIE",
           readAloud:
@@ -1082,7 +1082,7 @@ const Map<String, SceneConfig> sceneRegistry = {
               "Visuale tattica del tetto a cielo aperto con la pozza d'acqua ed i cespugli di rose.",
           narrative:
               "✦ Mappa Tattica Tetto: Zona di scontro con le tre arpie Cardo, Aculeo e Spina.\n\n"
-              "✦ Controlli GM: Usa 'Scendi al terzo piano' per rientrare nel laboratorio o 'Torna indietro' per ripristinare la vista illustrata.",
+              "✦ Controlli GM: Usa 'Scendi al terzo piano' per rientrare nel laboratorio, 'Vai alla cripta' per scendere nei sotterranei o 'Torna indietro' per ripristinare la vista illustrata.",
         ),
         directions: [],
         gmActions: [
@@ -1092,8 +1092,45 @@ const Map<String, SceneConfig> sceneRegistry = {
             icon: Icons.arrow_downward,
           ),
           DirectionButtonData(
+            label: "Vai alla cripta",
+            targetSceneIndex: 11,
+            icon: Icons.arrow_downward,
+          ),
+          DirectionButtonData(
             label: "Torna indietro",
             targetSceneIndex: 5,
+            icon: Icons.arrow_back,
+          ),
+        ],
+      ),
+
+      // Scene 11: GRIGLIA TATTICA — CRIPTA SOTTO LA TORRE
+      SceneData(
+        backgroundAsset: 'assets/images/guglia_troll_griglia_piano1.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "GRIGLIA TATTICA — CRIPTA SOTTO LA TORRE",
+          readAloud:
+              "GUGLIA DEL TROLL — MAPPA TATTICA CRIPTA\n"
+              "Visuale tattica della cripta sotterranea sotto la torre.",
+          narrative:
+              "✦ Mappa Tattica Cripta: Ambiente sotterraneo sotto la torre di Zirazzia.\n\n"
+              "✦ Controlli GM: Usa 'Sali al primo piano' per risalire o 'Sali al tetto' per tornare in cima.",
+        ),
+        directions: [],
+        gmActions: [
+          DirectionButtonData(
+            label: "Sali al primo piano",
+            targetSceneIndex: 7,
+            icon: Icons.arrow_upward,
+          ),
+          DirectionButtonData(
+            label: "Sali al tetto",
+            targetSceneIndex: 10,
+            icon: Icons.arrow_upward,
+          ),
+          DirectionButtonData(
+            label: "Torna indietro",
+            targetSceneIndex: 1,
             icon: Icons.arrow_back,
           ),
         ],
