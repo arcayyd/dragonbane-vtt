@@ -53,6 +53,8 @@ class MainLayout extends StatefulWidget {
 
 class _MainLayoutState extends State<MainLayout> {
   int _currentTabIndex = 0;
+  String? _lastActiveMapId;
+  int _lastRevealedHandoutsCount = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +69,13 @@ class _MainLayoutState extends State<MainLayout> {
     final activeMapId = room.activeMapId;
     final isGm = syncService.isGm;
     final playerCharId = room.playerSelections[syncService.currentUserId];
+
+    final currentRevealedCount = room.revealedHandouts.values.where((v) => v == 1).length;
+    if (_lastActiveMapId != null && (_lastActiveMapId != activeMapId || currentRevealedCount > _lastRevealedHandoutsCount)) {
+      _currentTabIndex = 0;
+    }
+    _lastActiveMapId = activeMapId;
+    _lastRevealedHandoutsCount = currentRevealedCount;
 
     // Determine current layout based on navigation tabs
     Widget mainScreen;
@@ -108,15 +117,20 @@ class _MainLayoutState extends State<MainLayout> {
               currentIndex: _currentTabIndex >= 4 ? 0 : _currentTabIndex,
               onTap: (index) {
                 if (index == 1) {
-                  _showNpcSelectorBottomSheet(context, syncService);
+                  _showNpcSelectorBottomSheet(context, syncService, onSelectMap: () {
+                    setState(() {
+                      _currentTabIndex = 0;
+                    });
+                  });
                   return;
                 }
                 if (index == 2) {
-                  _showEventSelectorBottomSheet(context, syncService);
+                  _showEventSelectorBottomSheet(context, syncService, onSelectMap: () {
+                    setState(() {
+                      _currentTabIndex = 0;
+                    });
+                  });
                   return;
-                }
-                if (index == 0 && room.activeMapId != 'overworld') {
-                  syncService.changeActiveMap('overworld');
                 }
                 setState(() {
                   _currentTabIndex = index;
@@ -196,7 +210,7 @@ class _MainLayoutState extends State<MainLayout> {
     );
   }
 
-  void _showNpcSelectorBottomSheet(BuildContext context, VttSyncService syncService) {
+  void _showNpcSelectorBottomSheet(BuildContext context, VttSyncService syncService, {VoidCallback? onSelectMap}) {
     showModalBottomSheet(
       context: context,
       backgroundColor: const Color(0xff181411),
@@ -320,6 +334,7 @@ class _MainLayoutState extends State<MainLayout> {
                           onTap: () {
                             syncService.setActiveGmNpcId(npc.id);
                             syncService.revealHandout('show_npc_${npc.id}');
+                            onSelectMap?.call();
                             Navigator.pop(context);
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
@@ -373,7 +388,7 @@ class _MainLayoutState extends State<MainLayout> {
     );
   }
 
-  void _showEventSelectorBottomSheet(BuildContext context, VttSyncService syncService) {
+  void _showEventSelectorBottomSheet(BuildContext context, VttSyncService syncService, {VoidCallback? onSelectMap}) {
     showModalBottomSheet(
       context: context,
       backgroundColor: const Color(0xff1a1512),
@@ -521,6 +536,7 @@ class _MainLayoutState extends State<MainLayout> {
                               InkWell(
                                 onTap: () {
                                   syncService.changeActiveMap('orlo_troll');
+                                  onSelectMap?.call();
                                   Navigator.pop(context);
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
@@ -574,6 +590,7 @@ class _MainLayoutState extends State<MainLayout> {
                                   InkWell(
                                     onTap: () {
                                       syncService.changeActiveMap('orlo_torre');
+                                      onSelectMap?.call();
                                       Navigator.pop(context);
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(
@@ -618,6 +635,7 @@ class _MainLayoutState extends State<MainLayout> {
                                   InkWell(
                                     onTap: () {
                                       syncService.changeActiveMap('cultisti_impiccati');
+                                      onSelectMap?.call();
                                       Navigator.pop(context);
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(
@@ -662,6 +680,7 @@ class _MainLayoutState extends State<MainLayout> {
                                   InkWell(
                                     onTap: () {
                                       syncService.changeActiveMap('cavaliere_drago');
+                                      onSelectMap?.call();
                                       Navigator.pop(context);
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(
@@ -706,6 +725,7 @@ class _MainLayoutState extends State<MainLayout> {
                                   InkWell(
                                     onTap: () {
                                       syncService.changeActiveMap('foresta');
+                                      onSelectMap?.call();
                                       Navigator.pop(context);
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(

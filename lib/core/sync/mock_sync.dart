@@ -424,7 +424,12 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
       updatedHandouts['show_cavalcawarg_handout'] = 1;
     }
 
-    final updatedRoom = room.copyWith(revealedHandouts: updatedHandouts);
+    final newActiveMap = _sceneMaxIndex.containsKey(mapId) ? mapId : room.activeMapId;
+
+    final updatedRoom = room.copyWith(
+      activeMapId: newActiveMap,
+      revealedHandouts: updatedHandouts,
+    );
     _serverRooms[code] = updatedRoom;
     _broadcastRoomChange(code);
   }
@@ -447,7 +452,12 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
     }
     updatedHandouts[mapId] = newVal;
 
-    final updatedRoom = room.copyWith(revealedHandouts: updatedHandouts);
+    final newActiveMap = _sceneMaxIndex.containsKey(mapId) ? mapId : room.activeMapId;
+
+    final updatedRoom = room.copyWith(
+      activeMapId: newActiveMap,
+      revealedHandouts: updatedHandouts,
+    );
     _serverRooms[code] = updatedRoom;
     _broadcastRoomChange(code);
   }
