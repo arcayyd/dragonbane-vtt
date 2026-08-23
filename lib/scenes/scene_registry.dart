@@ -491,7 +491,7 @@ const Map<String, SceneConfig> sceneRegistry = {
           MapPinData(label: '5', name: 'Negozio di Mastro Ulvar', description: 'Il negozio generale del villaggio.', xFraction: 0.38, yFraction: 0.23),
           MapPinData(label: '6', name: 'Fucina', description: 'La fucina di Okald e Badinor.', xFraction: 0.33, yFraction: 0.29),
           MapPinData(label: '7', name: 'Casa di Vagnhild', description: 'La casa della capovillaggio Vagnhild.', xFraction: 0.47, yFraction: 0.66),
-          MapPinData(label: '8', name: 'Pozzo', description: 'Il pozzo comune.', xFraction: 0.60, yFraction: 0.41),
+          MapPinData(label: '8', name: 'Area del Tempio', description: 'Il tempio in rovine sulla collina vicino ad Orlo dove risiede il mistico Dranath.', xFraction: 0.60, yFraction: 0.41),
           MapPinData(label: '9', name: 'Formazioni Rocciose', description: 'Rocce cristalline e grotta.', xFraction: 0.47, yFraction: 0.47),
           MapPinData(label: '10', name: 'Edificio Misterioso', description: 'Edificio evitato dagli abitanti.', xFraction: 0.54, yFraction: 0.53),
         ],
@@ -1220,6 +1220,25 @@ const Map<String, SceneConfig> sceneRegistry = {
           narrative:
               "✦ Merce Disponibile: Tutti gli oggetti Comuni da viaggio ed equipaggiamento da avventura del Manuale Base (pag. 80-82) sono disponibili qui a prezzi standard.\n\n"
               "✦ Pettegolezzi: Ulvar sa che molti avventurieri sono diretti verso la Guglia del Troll e raccomanda di non viaggiare senza corde, torce e razioni fresche.",
+        ),
+      ),
+    ],
+  ),
+  'orlo_tempio': SceneConfig(
+    mapId: 'orlo_tempio',
+    defaultBackground: 'assets/images/orlo_tempio.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      SceneData(
+        backgroundAsset: 'assets/images/orlo_tempio.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "8. AREA DEL TEMPIO",
+          readAloud:
+              "In cima a una collina erbosa poco distante dalle palizzate di Orlo si erge una solenne struttura in pietra con archi gotici e antiche colonne spezzate.\n\n"
+              "L'atmosfera qui è sacra e quieta, ed un sentiero in pietra conduce direttamente alla sommità del colle.",
+          narrative:
+              "✦ Il Tempio e Dranath: L'area del tempio è stata restaurata in parte ed è abitata da Dranath, un saggio ed enigmatico mistico.\n\n"
+              "✦ Conoscenza e Guarigione: Dranath è una fonte inestimabile di informazioni sulla storia della Valle Nebbiosa e sull'Imperatore Drago. Può anche curare le ferite dei personaggi in cambio di aiuto o informazioni.",
         ),
       ),
     ],

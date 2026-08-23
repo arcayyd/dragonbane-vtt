@@ -91,6 +91,7 @@ class _SubMapViewState extends State<SubMapView> {
       case 'cavaliere_drago': return "Cavaliere del Drago";
       case 'foresta': return "Foresta";
       case 'orlo_negozio': return "Negozio di Mastro Ulvar";
+      case 'orlo_tempio': return "Area del Tempio";
       default: return "Località Locale";
     }
   }
