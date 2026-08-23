@@ -89,6 +89,7 @@ class _SubMapViewState extends State<SubMapView> {
       case 'guglia_troll': return "Guglia del Troll";
       case 'cultisti_impiccati': return "Cultisti Impiccati";
       case 'cavaliere_drago': return "Cavaliere del Drago";
+      case 'foresta': return "Foresta";
       default: return "Località Locale";
     }
   }

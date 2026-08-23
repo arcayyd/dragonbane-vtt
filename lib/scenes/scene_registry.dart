@@ -1173,4 +1173,22 @@ const Map<String, SceneConfig> sceneRegistry = {
       ),
     ],
   ),
+  'foresta': SceneConfig(
+    mapId: 'foresta',
+    defaultBackground: 'assets/images/foresta.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      SceneData(
+        backgroundAsset: 'assets/images/foresta.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "FORESTA",
+          readAloud:
+              "EVENTO DI VIAGGIO — FORESTA\n"
+              "Un antico sentiero si snoda tra pini secolari, muschi e rocce coperte di nebbia. Corvi neri osservano il vostro passaggio dai rami ritorti.",
+          narrative:
+              "✦ Sentiero della Foresta: Una folta vegetazione avvolge il cammino. Tirare su CONSAPEVOLEZZA o SOPRAVVIVENZA per notare tracce di creature selvagge o trappole naturali.",
+        ),
+      ),
+    ],
+  ),
 };
