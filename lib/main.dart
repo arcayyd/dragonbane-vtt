@@ -668,6 +668,96 @@ class _MainLayoutState extends State<MainLayout> {
                                   ),
                                 ),
                               ),
+                              InkWell(
+                                onTap: () {
+                                  syncService.changeActiveMap('orlo_capanno_dranath');
+                                  onSelectMap?.call();
+                                  Navigator.pop(context);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: const Text("Spostamento al 'Capanno di Dranath' avvenuto per tutti!"),
+                                      backgroundColor: Colors.green[800],
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xff2d221a),
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                      color: syncService.currentRoom?.activeMapId == 'orlo_capanno_dranath' ? Colors.green : const Color(0xff4a3b32),
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  padding: const EdgeInsets.all(8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const CircleAvatar(
+                                        backgroundImage: AssetImage('assets/images/orlo_capanno_dranath.jpg'),
+                                        radius: 26,
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Text(
+                                        "Capanno Dranath".toUpperCase(),
+                                        style: GoogleFonts.cinzel(
+                                          color: syncService.currentRoom?.activeMapId == 'orlo_capanno_dranath' ? Colors.green[200] : Colors.white,
+                                          fontSize: 9,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  syncService.changeActiveMap('orlo_mulino_halfling');
+                                  onSelectMap?.call();
+                                  Navigator.pop(context);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: const Text("Spostamento al 'Mulino degli Halfling' avvenuto per tutti!"),
+                                      backgroundColor: Colors.green[800],
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xff2d221a),
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                      color: syncService.currentRoom?.activeMapId == 'orlo_mulino_halfling' ? Colors.green : const Color(0xff4a3b32),
+                                      width: 1.5,
+                                    ),
+                                  ),
+                                  padding: const EdgeInsets.all(8),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const CircleAvatar(
+                                        backgroundImage: AssetImage('assets/images/orlo_mulino_halfling.jpg'),
+                                        radius: 26,
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Text(
+                                        "Mulino Halfling".toUpperCase(),
+                                        style: GoogleFonts.cinzel(
+                                          color: syncService.currentRoom?.activeMapId == 'orlo_mulino_halfling' ? Colors.green[200] : Colors.white,
+                                          fontSize: 9,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ],
                           )
                         : (activeTravelSubCategory == 'attorno_orlo'

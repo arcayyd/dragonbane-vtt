@@ -103,6 +103,20 @@ class GmDashboardView extends StatelessWidget {
                           ),
                           child: const Text("AREA DEL TEMPIO"),
                         ),
+                        ElevatedButton(
+                          onPressed: () => syncService.changeActiveMap('orlo_capanno_dranath'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: room.activeMapId == 'orlo_capanno_dranath' ? VttTheme.primary : VttTheme.surfaceLight,
+                          ),
+                          child: const Text("CAPANNO DI DRANATH"),
+                        ),
+                        ElevatedButton(
+                          onPressed: () => syncService.changeActiveMap('orlo_mulino_halfling'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: room.activeMapId == 'orlo_mulino_halfling' ? VttTheme.primary : VttTheme.surfaceLight,
+                          ),
+                          child: const Text("MULINO HALFLING"),
+                        ),
                       ],
                     ),
                   ],

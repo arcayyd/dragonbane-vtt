@@ -490,9 +490,9 @@ const Map<String, SceneConfig> sceneRegistry = {
           MapPinData(label: '4', name: 'Locanda Ai Tre Cervi', description: 'La locanda del villaggio.', xFraction: 0.41, yFraction: 0.36),
           MapPinData(label: '5', name: 'Negozio di Mastro Ulvar', description: 'Il negozio generale del villaggio.', xFraction: 0.38, yFraction: 0.23),
           MapPinData(label: '6', name: 'Fucina', description: 'La fucina di Okald e Badinor.', xFraction: 0.33, yFraction: 0.29),
-          MapPinData(label: '7', name: 'Casa di Vagnhild', description: 'La casa della capovillaggio Vagnhild.', xFraction: 0.47, yFraction: 0.66),
+          MapPinData(label: '7', name: 'Mulino e Panetteria Halfling', description: 'Il mulino a vento e la panetteria gestita dagli halfling del villaggio.', xFraction: 0.47, yFraction: 0.66),
           MapPinData(label: '8', name: 'Area del Tempio', description: 'Il tempio in rovine sulla collina vicino ad Orlo dove risiede il mistico Dranath.', xFraction: 0.60, yFraction: 0.41),
-          MapPinData(label: '9', name: 'Formazioni Rocciose', description: 'Rocce cristalline e grotta.', xFraction: 0.47, yFraction: 0.47),
+          MapPinData(label: '9', name: 'Capanno di Dranath', description: 'La dimora in pietra del mistico guaritore Dranath.', xFraction: 0.47, yFraction: 0.47),
           MapPinData(label: '10', name: 'Edificio Misterioso', description: 'Edificio evitato dagli abitanti.', xFraction: 0.54, yFraction: 0.53),
         ],
       ),
@@ -1239,6 +1239,57 @@ const Map<String, SceneConfig> sceneRegistry = {
           narrative:
               "✦ Il Tempio e Dranath: L'area del tempio è stata restaurata in parte ed è abitata da Dranath, un saggio ed enigmatico mistico.\n\n"
               "✦ Conoscenza e Guarigione: Dranath è una fonte inestimabile di informazioni sulla storia della Valle Nebbiosa e sull'Imperatore Drago. Può anche curare le ferite dei personaggi in cambio di aiuto o informazioni.",
+        ),
+      ),
+    ],
+  ),
+  'orlo_capanno_dranath': SceneConfig(
+    mapId: 'orlo_capanno_dranath',
+    defaultBackground: 'assets/images/orlo_capanno_dranath.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      SceneData(
+        backgroundAsset: 'assets/images/orlo_capanno_dranath.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "9. CAPANNO DI DRANATH",
+          readAloud:
+              "Un accogliente capanno in pietra con un tetto di paglia ricoperto di muschio. Dal camino in pietra sale un fumo denso e profumato d'erbe essiccate.",
+          narrative:
+              "✦ La Dimora del Mistico: Qui vive Dranath, un guaritore e mistico rispettato dagli abitanti di Orlo.\n\n"
+              "✦ Erbe e Rimedi: All'interno del capanno sono conservate spezie, unguenti e rimedi alchemici. Dranath può vendere pozioni curative o offrire rifugio agli avventurieri feriti.",
+        ),
+      ),
+    ],
+  ),
+  'orlo_mulino_halfling': SceneConfig(
+    mapId: 'orlo_mulino_halfling',
+    defaultBackground: 'assets/images/orlo_mulino_halfling.jpg',
+    defaultOverlay: SceneOverlay.none,
+    scenes: [
+      // Scene 0: Mulino degli Halfling (Esterno)
+      SceneData(
+        backgroundAsset: 'assets/images/orlo_mulino_halfling.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "7. MULINO DEGLI HALFLING (ESTERNO)",
+          readAloud:
+              "Un caratteristico mulino a vento in pietra e legno con un grande tetto a tegole rosse ed una bandiera che garrisce al vento. "
+              "Nel cortile, tra staccionate in legno, maialini razzolano liberamente e galline beccettano il grano caduto.",
+          narrative:
+              "✦ La Fattoria degli Halfling: Il mulino macina il grano coltivato nei campi attorno ad Orlo per produrre farina freschissima.\n\n"
+              "✦ Passaggio alla Panetteria: Usa il tasto 'Avanza / Prossima Scena' del GM per entrare nella Panetteria al coperto.",
+        ),
+      ),
+      // Scene 1: Panetteria degli Halfling (Interno)
+      SceneData(
+        backgroundAsset: 'assets/images/orlo_panetteria_halfling.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "7. PANETTERIA DEGLI HALFLING (INTERNO)",
+          readAloud:
+              "Un ambiente caldo ed avvolgente dominato da un grande forno in pietra dove sfrigola il fuoco. "
+              "Su tavoli e scaffali in legno sono disposte trecce di pane dorato, focacce, tortine e forme di formaggio fresche.",
+          narrative:
+              "✦ Il Fornaio Halfling: Qui gli avventurieri possono acquistare razioni da viaggio di alta qualità (pane speciale e focacce) che mantengono l'energia più a lungo.\n\n"
+              "✦ Ritorno al Mulino: Usa il tasto 'Indietro / Scena Precedente' del GM per ritornare al cortile esterno del Mulino.",
         ),
       ),
     ],

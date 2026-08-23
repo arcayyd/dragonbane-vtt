@@ -92,6 +92,8 @@ class _SubMapViewState extends State<SubMapView> {
       case 'foresta': return "Foresta";
       case 'orlo_negozio': return "Negozio di Mastro Ulvar";
       case 'orlo_tempio': return "Area del Tempio";
+      case 'orlo_capanno_dranath': return "Capanno di Dranath";
+      case 'orlo_mulino_halfling': return "Mulino e Panetteria Halfling";
       default: return "Località Locale";
     }
   }
