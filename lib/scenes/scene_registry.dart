@@ -893,6 +893,11 @@ const Map<String, SceneConfig> sceneRegistry = {
             targetSceneIndex: 4,
             icon: Icons.face,
           ),
+          DirectionButtonData(
+            label: "Passa alla griglia",
+            targetSceneIndex: 9,
+            icon: Icons.grid_on,
+          ),
         ],
       ),
 
@@ -927,6 +932,11 @@ const Map<String, SceneConfig> sceneRegistry = {
             label: "Mostra arpie",
             targetSceneIndex: 5,
             icon: Icons.groups,
+          ),
+          DirectionButtonData(
+            label: "Passa alla griglia",
+            targetSceneIndex: 10,
+            icon: Icons.grid_on,
           ),
         ],
       ),
@@ -1030,17 +1040,17 @@ const Map<String, SceneConfig> sceneRegistry = {
         ],
       ),
 
-      // Scene 9: GRIGLIA TATTICA — TERZO PIANO
+      // Scene 9: GRIGLIA TATTICA — TERZO PIANO (Laboratorio di Harga)
       SceneData(
-        backgroundAsset: 'assets/images/guglia_troll_griglia_piano2.jpg',
+        backgroundAsset: 'assets/images/guglia_troll_griglia_piano3.jpg',
         gmNotes: GmNotesData(
           sectionTitle: "GRIGLIA TATTICA — TERZO PIANO",
           readAloud:
               "GUGLIA DEL TROLL — MAPPA TATTICA TERZO PIANO\n"
-              "Visuale tattica su griglia del Terzo Piano della torre.",
+              "Visuale tattica su griglia del Terzo Piano della torre (Laboratorio di Harga).",
           narrative:
-              "✦ Mappa Tattica Terzo Piano: In attesa dell'illustrazione del terzo piano.\n\n"
-              "✦ Controlli GM: Usa 'Scendi al secondo piano' per tornare al secondo piano o 'Torna indietro' per ripristinare la vista illustrata.",
+              "✦ Mappa Tattica Terzo Piano: Griglia con il focolare centrale, alambicchi, banchi da lavoro e la scala verso il tetto.\n\n"
+              "✦ Controlli GM: Usa 'Sali al tetto' per accedere al nido delle arpie, 'Scendi al secondo piano' per tornare giù o 'Torna indietro' per ripristinare l'illustrazione del laboratorio.",
         ),
         directions: [],
         gmActions: [
@@ -1050,8 +1060,40 @@ const Map<String, SceneConfig> sceneRegistry = {
             icon: Icons.arrow_downward,
           ),
           DirectionButtonData(
+            label: "Sali al tetto",
+            targetSceneIndex: 10,
+            icon: Icons.arrow_upward,
+          ),
+          DirectionButtonData(
             label: "Torna indietro",
-            targetSceneIndex: 3,
+            targetSceneIndex: 4,
+            icon: Icons.arrow_back,
+          ),
+        ],
+      ),
+
+      // Scene 10: GRIGLIA TATTICA — TETTO / NIDO DELLE ARPIE
+      SceneData(
+        backgroundAsset: 'assets/images/guglia_troll_arpie.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "GRIGLIA TATTICA — TETTO / NIDO DELLE ARPIE",
+          readAloud:
+              "GUGLIA DEL TROLL — MAPPA TATTICA TETTO / NIDO ARPIE\n"
+              "Visuale tattica del tetto a cielo aperto con la pozza d'acqua ed i cespugli di rose.",
+          narrative:
+              "✦ Mappa Tattica Tetto: Zona di scontro con le tre arpie Cardo, Aculeo e Spina.\n\n"
+              "✦ Controlli GM: Usa 'Scendi al terzo piano' per rientrare nel laboratorio o 'Torna indietro' per ripristinare la vista illustrata.",
+        ),
+        directions: [],
+        gmActions: [
+          DirectionButtonData(
+            label: "Scendi al terzo piano",
+            targetSceneIndex: 9,
+            icon: Icons.arrow_downward,
+          ),
+          DirectionButtonData(
+            label: "Torna indietro",
+            targetSceneIndex: 5,
             icon: Icons.arrow_back,
           ),
         ],
