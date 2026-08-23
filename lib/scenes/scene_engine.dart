@@ -554,11 +554,28 @@ class _SubLocationMapWidgetState extends State<_SubLocationMapWidget> {
     final allNodes = room.mapNodes;
     final subMapNodes = allNodes.where((n) => n.subMapId == widget.subMapId).toList();
 
-    // Auto-initialize static pins on the server if empty
-    if (isGm && subMapNodes.isEmpty && widget.scene.mapPins.isNotEmpty) {
+    // Auto-initialize static pins on the server if empty or update static pins if names mismatch
+    bool needsUpdate = isGm && subMapNodes.isEmpty && widget.scene.mapPins.isNotEmpty;
+    
+    // Check if pins 8 or 9 are old names (Pozzo / Formazioni Rocciose) and force refresh
+    if (isGm && !needsUpdate && widget.scene.mapPins.isNotEmpty) {
+      final pin8 = subMapNodes.firstWhere((n) => n.name.contains('Pozzo') || n.name.contains('Formazioni'), orElse: () => MapNode(id: '', name: '', description: '', xPercent: 0, yPercent: 0, isGmOnly: false, targetSubMap: '', subMapId: ''));
+      if (pin8.id.isNotEmpty) {
+        needsUpdate = true;
+      }
+    }
+
+    if (needsUpdate) {
       final List<MapNode> initialNodes = [];
       for (int i = 0; i < widget.scene.mapPins.length; i++) {
         final pin = widget.scene.mapPins[i];
+        String targetMap = '';
+        if (pin.label == '5' || pin.name.contains('Ulvar')) targetMap = 'orlo_negozio';
+        if (pin.label == '7' || pin.name.contains('Mulino') || pin.name.contains('Halfling')) targetMap = 'orlo_mulino_halfling';
+        if (pin.label == '8' || pin.name.contains('Tempio')) targetMap = 'orlo_tempio';
+        if (pin.label == '9' || pin.name.contains('Capanno') || pin.name.contains('Dranath')) targetMap = 'orlo_capanno_dranath';
+        if (pin.label == '4' || pin.name.contains('Tre Cervi')) targetMap = 'locanda_tre_cervi';
+
         initialNodes.add(MapNode(
           id: "pin_${widget.subMapId}_${i}",
           name: pin.name,
@@ -566,11 +583,12 @@ class _SubLocationMapWidgetState extends State<_SubLocationMapWidget> {
           xPercent: pin.xFraction * 100,
           yPercent: pin.yFraction * 100,
           isGmOnly: false,
-          targetSubMap: '',
+          targetSubMap: targetMap,
           subMapId: widget.subMapId,
         ));
       }
-      final updatedList = List<MapNode>.from(allNodes)..addAll(initialNodes);
+      final otherNodes = allNodes.where((n) => n.subMapId != widget.subMapId).toList();
+      final updatedList = List<MapNode>.from(otherNodes)..addAll(initialNodes);
       Future.microtask(() => widget.syncService.updateMapNodes(updatedList));
     }
 
@@ -791,14 +809,40 @@ class _SubLocationMapWidgetState extends State<_SubLocationMapWidget> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          if (_selectedNode!.targetSubMap.isNotEmpty)
-                            TextButton.icon(
-                              icon: const Icon(Icons.exit_to_app, color: Colors.green, size: 16),
-                              label: const Text("ATTIVA LOCALITÀ", style: TextStyle(color: Colors.green, fontSize: 11)),
-                              onPressed: () {
-                                widget.syncService.changeActiveMap(_selectedNode!.targetSubMap);
-                              },
-                            ),
+                          Builder(
+                            builder: (context) {
+                              String targetMap = _selectedNode!.targetSubMap;
+                              final name = _selectedNode!.name;
+                              final id = _selectedNode!.id;
+                              if (targetMap.isEmpty) {
+                                if (id.endsWith('_8') || name.contains('Tempio')) targetMap = 'orlo_tempio';
+                                else if (id.endsWith('_9') || name.contains('Capanno') || name.contains('Dranath')) targetMap = 'orlo_capanno_dranath';
+                                else if (id.endsWith('_7') || name.contains('Mulino') || name.contains('Halfling')) targetMap = 'orlo_mulino_halfling';
+                                else if (id.endsWith('_5') || name.contains('Ulvar')) targetMap = 'orlo_negozio';
+                                else if (id.endsWith('_4') || name.contains('Cervi')) targetMap = 'locanda_tre_cervi';
+                              }
+
+                              if (targetMap.isEmpty) return const SizedBox.shrink();
+
+                              return ElevatedButton.icon(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xff7a1515),
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                ),
+                                icon: const Icon(Icons.meeting_room, color: Color(0xffdfc48c), size: 14),
+                                label: const Text("ENTRA IN QUESTO LUOGO", style: TextStyle(color: Color(0xffdfc48c), fontSize: 10, fontWeight: FontWeight.bold)),
+                                onPressed: () {
+                                  if (isGm) {
+                                    widget.syncService.changeActiveMap(targetMap);
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(content: Text("Solo il GM può cambiare la mappa attiva della sessione.")),
+                                    );
+                                  }
+                                },
+                              );
+                            },
+                          ),
                           TextButton.icon(
                             icon: const Icon(Icons.delete, color: kDragonRed, size: 16),
                             label: const Text("ELIMINA PIN", style: TextStyle(color: kDragonRed, fontSize: 11)),
