@@ -36,26 +36,28 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
   }
 
   Future<void> _fetchRoomStateFromServer() async {
-    if (_currentRoom == null) return;
+    if (_currentRoom == null || _currentRoom!.roomCode == 'null' || _currentRoom!.roomCode.isEmpty) return;
     final roomCode = _currentRoom!.roomCode;
     try {
       final response = await http.get(Uri.parse('api/room/$roomCode'));
       if (response.statusCode == 200) {
         final roomJson = jsonDecode(response.body);
-        final updatedRoom = GameRoom.fromJson(roomJson);
-        
-        // Check for state changes to avoid unnecessary notification loops
-        if (_currentRoom == null ||
-            _currentRoom!.activeMapId != updatedRoom.activeMapId ||
-            _currentRoom!.tokens.length != updatedRoom.tokens.length ||
-            _currentRoom!.mapNodes.length != updatedRoom.mapNodes.length ||
-            jsonEncode(_currentRoom!.tokens) != jsonEncode(updatedRoom.tokens) ||
-            jsonEncode(_currentRoom!.mapNodes) != jsonEncode(updatedRoom.mapNodes) ||
-            jsonEncode(_currentRoom!.rollLog) != jsonEncode(updatedRoom.rollLog) ||
-            jsonEncode(_currentRoom!.revealedHandouts) != jsonEncode(updatedRoom.revealedHandouts)) {
+        if (roomJson is Map<String, dynamic> && roomJson.containsKey('roomCode') && roomJson['roomCode'] != null && roomJson['roomCode'] != 'null') {
+          final updatedRoom = GameRoom.fromJson(roomJson);
           
-          _currentRoom = updatedRoom;
-          notifyListeners();
+          // Check for state changes to avoid unnecessary notification loops
+          if (_currentRoom == null ||
+              _currentRoom!.activeMapId != updatedRoom.activeMapId ||
+              _currentRoom!.tokens.length != updatedRoom.tokens.length ||
+              _currentRoom!.mapNodes.length != updatedRoom.mapNodes.length ||
+              jsonEncode(_currentRoom!.tokens) != jsonEncode(updatedRoom.tokens) ||
+              jsonEncode(_currentRoom!.mapNodes) != jsonEncode(updatedRoom.mapNodes) ||
+              jsonEncode(_currentRoom!.rollLog) != jsonEncode(updatedRoom.rollLog) ||
+              jsonEncode(_currentRoom!.revealedHandouts) != jsonEncode(updatedRoom.revealedHandouts)) {
+            
+            _currentRoom = updatedRoom;
+            notifyListeners();
+          }
         }
       }
     } catch (e) {
@@ -64,6 +66,7 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
   }
 
   static Future<void> _pushRoomToServer(String roomCode) async {
+    if (roomCode == 'null' || roomCode.isEmpty) return;
     final room = _serverRooms[roomCode];
     if (room == null) return;
     try {
@@ -111,14 +114,16 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
       final response = await http.get(Uri.parse('api/room/$code'));
       if (response.statusCode == 200) {
         final roomJson = jsonDecode(response.body);
-        final roomFromServer = GameRoom.fromJson(roomJson);
-        _serverRooms[code] = roomFromServer;
-        _currentRoom = roomFromServer;
-        _currentUserId = 'gm_user';
-        _isGm = true;
-        _startSyncTimer();
-        notifyListeners();
-        return true;
+        if (roomJson is Map<String, dynamic> && roomJson.containsKey('roomCode') && roomJson['roomCode'] != null && roomJson['roomCode'] != 'null') {
+          final roomFromServer = GameRoom.fromJson(roomJson);
+          _serverRooms[code] = roomFromServer;
+          _currentRoom = roomFromServer;
+          _currentUserId = 'gm_user';
+          _isGm = true;
+          _startSyncTimer();
+          notifyListeners();
+          return true;
+        }
       }
     } catch (e) {
       // Server offline or room not created yet, proceed locally
@@ -158,8 +163,10 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
       final response = await http.get(Uri.parse('api/room/$code'));
       if (response.statusCode == 200) {
         final roomJson = jsonDecode(response.body);
-        final roomFromServer = GameRoom.fromJson(roomJson);
-        _serverRooms[code] = roomFromServer;
+        if (roomJson is Map<String, dynamic> && roomJson.containsKey('roomCode') && roomJson['roomCode'] != null && roomJson['roomCode'] != 'null') {
+          final roomFromServer = GameRoom.fromJson(roomJson);
+          _serverRooms[code] = roomFromServer;
+        }
       }
     } catch (e) {
       // Server offline
