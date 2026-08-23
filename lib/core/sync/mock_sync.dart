@@ -393,7 +393,7 @@ class MockSyncProvider extends ChangeNotifier implements VttSyncService {
     'orlo_fucina': 0,
     'orlo_troll': 0,
     'orlo_torre': 0,
-    'guglia_troll': 7,
+    'guglia_troll': 8,
     'cultisti_impiccati': 0,
     'cavaliere_drago': 0,
   };

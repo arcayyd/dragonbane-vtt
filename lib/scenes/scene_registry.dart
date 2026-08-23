@@ -729,6 +729,13 @@ const Map<String, SceneConfig> sceneRegistry = {
             icon: Icons.arrow_downward,
           ),
         ],
+        gmActions: [
+          DirectionButtonData(
+            label: "Passa alla griglia",
+            targetSceneIndex: 7,
+            icon: Icons.grid_on,
+          ),
+        ],
       ),
 
       // Scene 1: 2. SALONE DELLA TORRE
@@ -763,6 +770,11 @@ const Map<String, SceneConfig> sceneRegistry = {
             label: "mostra ambrosius",
             targetSceneIndex: 1,
             icon: Icons.bug_report,
+          ),
+          DirectionButtonData(
+            label: "Passa alla griglia",
+            targetSceneIndex: 7,
+            icon: Icons.grid_on,
           ),
         ],
       ),
@@ -941,6 +953,60 @@ const Map<String, SceneConfig> sceneRegistry = {
             label: "Mostra arpie",
             targetSceneIndex: 6,
             icon: Icons.groups,
+          ),
+        ],
+      ),
+
+      // Scene 7: GRIGLIA TATTICA — PRIMO PIANO
+      SceneData(
+        backgroundAsset: 'assets/images/guglia_troll_griglia_piano1.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "GRIGLIA TATTICA — PRIMO PIANO",
+          readAloud:
+              "GUGLIA DEL TROLL — MAPPA TATTICA PRIMO PIANO\n"
+              "Visuale tattica su griglia del Primo Piano della torre.",
+          narrative:
+              "✦ Mappa Tattica Primo Piano: Griglia con quadrati di movimento per i personaggi e i nemici.\n\n"
+              "✦ Controlli GM: Usa 'Sali di un piano' per mostrare il livello superiore o 'Torna indietro' per ripristinare l'illustrazione della scena.",
+        ),
+        directions: [],
+        gmActions: [
+          DirectionButtonData(
+            label: "Sali di un piano",
+            targetSceneIndex: 8,
+            icon: Icons.arrow_upward,
+          ),
+          DirectionButtonData(
+            label: "Torna indietro",
+            targetSceneIndex: 1,
+            icon: Icons.arrow_back,
+          ),
+        ],
+      ),
+
+      // Scene 8: GRIGLIA TATTICA — SECONDO PIANO (Temporanea)
+      SceneData(
+        backgroundAsset: 'assets/images/guglia_troll_griglia_piano1.jpg',
+        gmNotes: GmNotesData(
+          sectionTitle: "GRIGLIA TATTICA — SECONDO PIANO",
+          readAloud:
+              "GUGLIA DEL TROLL — MAPPA TATTICA SECONDO PIANO\n"
+              "Visuale tattica su griglia del Secondo Piano della torre.",
+          narrative:
+              "✦ Mappa Tattica Secondo Piano: In attesa dell'illustrazione del secondo piano.\n\n"
+              "✦ Controlli GM: Usa 'Scendi di un piano' per tornare al primo piano o 'Torna indietro' per ripristinare la vista illustrata.",
+        ),
+        directions: [],
+        gmActions: [
+          DirectionButtonData(
+            label: "Scendi di un piano",
+            targetSceneIndex: 7,
+            icon: Icons.arrow_downward,
+          ),
+          DirectionButtonData(
+            label: "Torna indietro",
+            targetSceneIndex: 1,
+            icon: Icons.arrow_back,
           ),
         ],
       ),
