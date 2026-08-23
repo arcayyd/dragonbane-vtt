@@ -1106,15 +1106,15 @@ const Map<String, SceneConfig> sceneRegistry = {
 
       // Scene 11: GRIGLIA TATTICA — CRIPTA SOTTO LA TORRE
       SceneData(
-        backgroundAsset: 'assets/images/guglia_troll_griglia_piano1.jpg',
+        backgroundAsset: 'assets/images/guglia_troll_griglia_cripta.jpg',
         gmNotes: GmNotesData(
           sectionTitle: "GRIGLIA TATTICA — CRIPTA SOTTO LA TORRE",
           readAloud:
               "GUGLIA DEL TROLL — MAPPA TATTICA CRIPTA\n"
-              "Visuale tattica della cripta sotterranea sotto la torre.",
+              "Visuale tattica della cripta sotterranea decorata con i 4 volti dei draghi nei quadranti.",
           narrative:
-              "✦ Mappa Tattica Cripta: Ambiente sotterraneo sotto la torre di Zirazzia.\n\n"
-              "✦ Controlli GM: Usa 'Sali al primo piano' per risalire o 'Sali al tetto' per tornare in cima.",
+              "✦ Mappa Tattica Cripta: Ambiente sotterraneo con le lastre dei quattro draghi (A, B, C, D), la porta di ferro (#7) ed il basamento centrale.\n\n"
+              "✦ Controlli GM: Usa 'Sali al primo piano' per risalire il portello, 'Torna al tetto' per andare in cima o 'Torna indietro' per ripristinare la vista illustrata.",
         ),
         directions: [],
         gmActions: [
@@ -1124,7 +1124,7 @@ const Map<String, SceneConfig> sceneRegistry = {
             icon: Icons.arrow_upward,
           ),
           DirectionButtonData(
-            label: "Sali al tetto",
+            label: "Torna al tetto",
             targetSceneIndex: 10,
             icon: Icons.arrow_upward,
           ),
